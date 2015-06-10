@@ -53,9 +53,7 @@ h1, h2 {
 
 /*
     Основные классы сеточной структуры
-    !important - исключаем переопределение параметров влияющих на размеры сетки
     Тест сетки: https://jsfiddle.net/1t95298x/3/
-
 */
 .container {
     max-width: 1200px;
@@ -68,12 +66,12 @@ h1, h2 {
 
 .column {
     float: left;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-    border-left: none !important;
-    border-right: none !important;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+    border-left: none;
+    border-right: none;
 }
 .column:last-child {
     float: right;
@@ -83,13 +81,13 @@ h1, h2 {
 }
 
 .column-single {
-    width: 33% !important;
+    width: 33%;
 }
 .column-double {
-    width: 67% !important;
+    width: 67%;
 }
 .column-single:not(:first-child):not(:last-child) {
-    width: 34% !important;
+    width: 34%;
 }
 
 /*
@@ -124,10 +122,32 @@ h1, h2 {
 /*
     hotels.html
 */
-.hotels-filters {
-
+/*
+По макетам sedona-hotels-768.psd и sedona-hotels-1200.psd:
+    Особеность сетки страницы hotels - горизонтальные отступы контента от границ
+    общего контейнера. Величина отступов зависит от ширины контейнера.
+    При общей ширине 768px - 30px слева / 32px справа  ~= 3.9% / 4.2%
+    При общей ширине 1200px - 71px слева / 82px справа ~= 5.9% / 6.8%
+    Учитывая неочевидность поведения отступов, временное решение - усреднение:
+    слева (от 3.9% до 5.9%) => 5%
+    справа (от 5.9% до 6.8%) => 6.5%
+По Т.З. - Главное меню и футер совпадают с главной страницей.
+*/
+.hotels-filters .column:first-child {
+    width: 28%;
+    padding-left: 5%;
 }
-.hotels-catalog {
-
+.hotels-filters .column:last-child {
+    width: 26.5%;
+    padding-right: 6.5%;
 }
+.hotels-filters .column:first-child:last-child {
+    width: auto;
+}
+
+.hotels-catalog .catalog-row {
+    padding-left: 5%;
+    padding-right: 6.5%;
+}
+
 /*---------------------------------------------------------------------------*/
