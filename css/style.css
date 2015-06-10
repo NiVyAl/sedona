@@ -162,4 +162,12 @@ h1, h2 {
     padding-left: 5%;
     padding-right: 6.5%;
 }
+
+.hotels-filters {
+    padding-top: 25px;
+}
+.catalog-row {
+     padding-top: 30px;
+     padding-bottom: 30px;
+}
 /*---------------------------------------------------------------------------*/
