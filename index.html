@@ -7,244 +7,240 @@
     <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-    <!-- Т.З.: Контентная область центрируется -->
-    <div class="container">
+    <!-- Т.З.:
+    Логотип — это ссылка на главную страницу.
+    Главное меню: четыре ячейки по 20% ширины, в каждой из них контент лежит по центру.
+    Между второй и третьей есть отступ для расположения логотипа так же шириной 20%.
+    -->
+    <!-- Тест скелета шапки - https://jsfiddle.net/6ybucgyv/ -->
 
-        <!-- Т.З.:
-        Логотип — это ссылка на главную страницу.
-        Главное меню: четыре ячейки по 20% ширины, в каждой из них контент лежит по центру.
-        Между второй и третьей есть отступ для расположения логотипа так же шириной 20%.
-        -->
-        <!-- Тест скелета шапки - https://jsfiddle.net/6ybucgyv/ -->
-
-        <header class="main-header row">
-            <a class="logo" href="/id99049/sedona/">лого</a>
-            <nav class="main-menu clearfix">
-                <a href="#">Информация</a>
-                <a href="#">Фото и видео</a>
-                <a href="#">Карта штата</a>
-                <a href="hotels.html">Гостиницы</a>
-            </nav><!-- main-menu -->
-        </header><!-- main-header -->
+    <header class="main-header row">
+        <a class="logo" href="/id99049/sedona/">лого</a>
+        <nav class="main-menu clearfix">
+            <a href="#">Информация</a>
+            <a href="#">Фото и видео</a>
+            <a href="#">Карта штата</a>
+            <a href="hotels.html">Гостиницы</a>
+        </nav><!-- main-menu -->
+    </header><!-- main-header -->
 
 
-        <!-- Т.З.:
-        Крупное фото: фотография занимает 100% ширины,
-        в её нижней части есть белая маска, которая также масштабируется на 100% ширины,
-        но в отличие от фотографии меняет свои пропорции
-        (то есть высота остаётся постоянной, а ширина — 100%)
-         -->
-        <section class="intro row">
-            <div class="intro-poster">
-                <img class="poster" src="img/tmp/photo-01.jpg" width="1200" height="733" alt="Седона">
+    <!-- Т.З.:
+    Крупное фото: фотография занимает 100% ширины,
+    в её нижней части есть белая маска, которая также масштабируется на 100% ширины,
+    но в отличие от фотографии меняет свои пропорции
+    (то есть высота остаётся постоянной, а ширина — 100%)
+     -->
+    <section class="intro row">
+        <div class="intro-poster">
+            <img class="poster" src="img/tmp/photo-01.jpg" width="1200" height="733" alt="Седона">
 
-                <!-- ToDo:
-                изображения надписей постера должны быть отцентрированны и фиксированного размера
-                вариант реализации - через фон псевдоэлемента
-                -->
+            <!-- ToDo:
+            изображения надписей постера должны быть отцентрированны и фиксированного размера
+            вариант реализации - через фон псевдоэлемента
+            -->
 
-            </div><!-- intro-poster -->
+        </div><!-- intro-poster -->
 
-            <!-- ToDo: Реализация белой маски через фон футера -->
-            <footer class="intro-footer">
-                <h1 class="intro-title">
-                    Седона — небольшой городок в Аризоне, заслуживающий большего!
-                </h1>
-                Рассмотрим 5 причин, по которым Седона круче чем гранд каньон!
-            </footer><!-- intro-footer -->
-        </section><!-- intro -->
-
-
-        <!-- Т.З.:
-        Фотографии, занимающие по две трети ширины вставляются так,
-        чтобы обрезаться сверху и снизу при увеличении размера (ширина 66%,
-        высота подстраивается под ширину, чтобы не нарушать пропорций,
-        но фото не выходит за отведённую для него зону).
-        -->
-        <section class="features row clearfix">
-            <div class="feature-description column column-single">
-                <!--
-                реализация вставки номера (атрибут [data-number]) через псевдоэлемен
-                Тест: https://jsfiddle.net/59gd5qjd/
-                -->
-                <div class="feature-title" data-number="1">
-                    Настоящий<br>
-                    городок
-                </div>
-
-                <p>
-                    Седона не атракцион для туристов, там течет своя жизнь
-                </p>
-            </div><!-- feature-description -->
-
-            <div class="feature-poster column column-double">
-                <img class="poster" src="img/tmp/photo-02.jpg" width="800" height="256" alt="Городок">
-            </div><!-- feature-poster -->
-        </section><!-- features -->
+        <!-- ToDo: Реализация белой маски через фон футера -->
+        <footer class="intro-footer">
+            <h1 class="intro-title">
+                Седона — небольшой городок в Аризоне, заслуживающий большего!
+            </h1>
+            Рассмотрим 5 причин, по которым Седона круче чем гранд каньон!
+        </footer><!-- intro-footer -->
+    </section><!-- intro -->
 
 
-        <section class="advices row clearfix">
-            <div class="advice-description column column-single">
-                <i class="icon icon-house">house</i>
-
-                <div class="advice-title">
-                    Жилье
-                </div>
-
-                <p>
-                    Рекомендуем пожить в настоящем мотеле, все как в кино!
-                </p>
-            </div><!-- advice-description -->
-
-            <div class="advice-description column column-single">
-                <i class="icon icon-food">food</i>
-
-                <div class="advice-title">
-                    Еда
-                </div>
-
-                <p>
-                    Всегда заказывайте фирменный бургер, Вы не разочаруетесь!
-                </p>
-            </div><!-- advice-description -->
-
-            <div class="advice-description column column-single">
-                <i class="icon icon-gift">gift</i>
-
-                <div class="advice-title">
-                    Сувениры
-                </div>
-
-                <p>
-                    Не только китайского, но и местного производства!
-                </p>
-            </div><!-- advice-description -->
-        </section><!-- advices -->
-
-
-        <section class="features row clearfix">
-            <div class="feature-poster column column-double">
-                <img class="poster" src="img/tmp/photo-03.jpg" width="800" height="256" alt="Мост дьявола">
-            </div><!-- feature-poster -->
-
-            <div class="feature-description column column-single">
-                <div class="feature-title" data-number="2">
-                    Там есть<br>
-                    мост дьявола
-                </div>
-
-                <p>
-                    Да, по нему можно пройти! Если конечно вы осмелитесь
-                </p>
-            </div><!-- feature-description -->
-        </section><!-- features -->
-
-
-        <section class="features row clearfix">
-            <div class="feature-description column column-single">
-                <div class="feature-title" data-number="3">
-                    Небольшая<br>
-                    площадь
-                </div>
-
-                <p>
-                    Все достопримечательности находятся очень близко
-                </p>
-            </div><!-- feature-description -->
-
-            <div class="feature-description column column-single">
-                <div class="feature-title" data-number="4">
-                    Красивая<br>
-                    дорога
-                </div>
-
-                <p>
-                    Ехать в седону из Лас-Вегаса совсем не скучно!
-                </p>
-            </div><!-- feature-description -->
-
-            <div class="feature-description column column-single">
-                <div class="feature-title" data-number="5">
-                    Мало<br>
-                    туристов
-                </div>
-
-                <p>
-                    Большинство едет в Гранд Каньон и толпится там
-                </p>
-            </div><!-- feature-description -->
-        </section><!-- features -->
-
-
-        <!-- Т.З.:
-        Кнопка «Поиск гостиницы в Седоне» управляет отображением формы поиска
-        гостиницы (смотрите папку слоёв «search form»), необходимо дополнить
-        анимацией «выезда» сверху вниз.
-        -->
-        <section class="search row">
-            <div class="search-title">
-                Заинтересовались?
+    <!-- Т.З.:
+    Фотографии, занимающие по две трети ширины вставляются так,
+    чтобы обрезаться сверху и снизу при увеличении размера (ширина 66%,
+    высота подстраивается под ширину, чтобы не нарушать пропорций,
+    но фото не выходит за отведённую для него зону).
+    -->
+    <section class="features row clearfix">
+        <div class="feature-description column column-single">
+            <!--
+            реализация вставки номера (атрибут [data-number]) через псевдоэлемен
+            Тест: https://jsfiddle.net/59gd5qjd/
+            -->
+            <div class="feature-title" data-number="1">
+                Настоящий<br>
+                городок
             </div>
+
             <p>
-                Укажите предполагаемые даты поездки и мы покажем вам лучшие предложения гостиниц в седоне
+                Седона не атракцион для туристов, там течет своя жизнь
             </p>
-            <div class="search-container">
-                <a class="btn btn-tab" href="#" >Поиск гостиницы в Седоне</a>
+        </div><!-- feature-description -->
 
-                <form class="search-form hidden" action="/search" method="get">
-                    <label>Дата заезда:
-                        <!-- <input type="text" name="date-in" value="24 Апреля 2014"> -->
-                        <input type="date" name="date-in" value="2014-04-24">
+        <div class="feature-poster column column-double">
+            <img class="poster" src="img/tmp/photo-02.jpg" width="800" height="256" alt="Городок">
+        </div><!-- feature-poster -->
+    </section><!-- features -->
+
+
+    <section class="advices row clearfix">
+        <div class="advice-description column column-single">
+            <i class="icon icon-house">house</i>
+
+            <div class="advice-title">
+                Жилье
+            </div>
+
+            <p>
+                Рекомендуем пожить в настоящем мотеле, все как в кино!
+            </p>
+        </div><!-- advice-description -->
+
+        <div class="advice-description column column-single">
+            <i class="icon icon-food">food</i>
+
+            <div class="advice-title">
+                Еда
+            </div>
+
+            <p>
+                Всегда заказывайте фирменный бургер, Вы не разочаруетесь!
+            </p>
+        </div><!-- advice-description -->
+
+        <div class="advice-description column column-single">
+            <i class="icon icon-gift">gift</i>
+
+            <div class="advice-title">
+                Сувениры
+            </div>
+
+            <p>
+                Не только китайского, но и местного производства!
+            </p>
+        </div><!-- advice-description -->
+    </section><!-- advices -->
+
+
+    <section class="features row clearfix">
+        <div class="feature-poster column column-double">
+            <img class="poster" src="img/tmp/photo-03.jpg" width="800" height="256" alt="Мост дьявола">
+        </div><!-- feature-poster -->
+
+        <div class="feature-description column column-single">
+            <div class="feature-title" data-number="2">
+                Там есть<br>
+                мост дьявола
+            </div>
+
+            <p>
+                Да, по нему можно пройти! Если конечно вы осмелитесь
+            </p>
+        </div><!-- feature-description -->
+    </section><!-- features -->
+
+
+    <section class="features row clearfix">
+        <div class="feature-description column column-single">
+            <div class="feature-title" data-number="3">
+                Небольшая<br>
+                площадь
+            </div>
+
+            <p>
+                Все достопримечательности находятся очень близко
+            </p>
+        </div><!-- feature-description -->
+
+        <div class="feature-description column column-single">
+            <div class="feature-title" data-number="4">
+                Красивая<br>
+                дорога
+            </div>
+
+            <p>
+                Ехать в седону из Лас-Вегаса совсем не скучно!
+            </p>
+        </div><!-- feature-description -->
+
+        <div class="feature-description column column-single">
+            <div class="feature-title" data-number="5">
+                Мало<br>
+                туристов
+            </div>
+
+            <p>
+                Большинство едет в Гранд Каньон и толпится там
+            </p>
+        </div><!-- feature-description -->
+    </section><!-- features -->
+
+
+    <!-- Т.З.:
+    Кнопка «Поиск гостиницы в Седоне» управляет отображением формы поиска
+    гостиницы (смотрите папку слоёв «search form»), необходимо дополнить
+    анимацией «выезда» сверху вниз.
+    -->
+    <section class="search row">
+        <div class="search-title">
+            Заинтересовались?
+        </div>
+        <p>
+            Укажите предполагаемые даты поездки и мы покажем вам лучшие предложения гостиниц в седоне
+        </p>
+        <div class="search-container">
+            <a class="btn btn-tab" href="#" >Поиск гостиницы в Седоне</a>
+
+            <form class="search-form hidden" action="/search" method="get">
+                <label>Дата заезда:
+                    <!-- <input type="text" name="date-in" value="24 Апреля 2014"> -->
+                    <input type="date" name="date-in" value="2014-04-24">
+                </label>
+
+                <label>Дата выезда:
+                    <!-- <input type="text" name="date-out" value="4 июля 2014"> -->
+                    <input type="date" name="date-out" value="2014-07-04">
+                </label>
+
+                <div class="controls-row clearfix">
+                    <label>Взрослые:
+                        <input type="number" name="adult" value="2">
                     </label>
 
-                    <label>Дата выезда:
-                        <!-- <input type="text" name="date-out" value="4 июля 2014"> -->
-                        <input type="date" name="date-out" value="2014-07-04">
+                    <label>Дети:
+                        <input type="number" name="children" value="0">
                     </label>
+                </div><!-- controls-row -->
 
-                    <div class="controls-row clearfix">
-                        <label>Взрослые:
-                            <input type="number" name="adult" value="2">
-                        </label>
-
-                        <label>Дети:
-                            <input type="number" name="children" value="0">
-                        </label>
-                    </div><!-- controls-row -->
-
-                    <input class="btn btn-search" type="submit" value="Найти">
-                </form><!-- search-form -->
-            </div><!-- search-container -->
-        </section><!-- search -->
+                <input class="btn btn-search" type="submit" value="Найти">
+            </form><!-- search-form -->
+        </div><!-- search-container -->
+    </section><!-- search -->
 
 
-        <!-- Т.З.:
-        Блок карты — достаточная реализация — обычное изображение.
-        Блок карты — реализация по желанию — интерактивная карта,
-        которая также масштабируется на 100% ширины.
-        -->
-        <section class="map row">
-            <a href="#">
-                <img src="img/tmp/map-01.jpg" width="1280" height="747" alt="Карта расположения Седоны">
-            </a>
-        </section><!-- map -->
+    <!-- Т.З.:
+    Блок карты — достаточная реализация — обычное изображение.
+    Блок карты — реализация по желанию — интерактивная карта,
+    которая также масштабируется на 100% ширины.
+    -->
+    <section class="map row">
+        <a href="#">
+            <img src="img/tmp/map-01.jpg" width="1280" height="747" alt="Карта расположения Седоны">
+        </a>
+    </section><!-- map -->
 
 
-        <footer class="main-footer row clearfix">
-            <div class="footer-links column column-single">
-                <a href="#">#visitsedona</a>
-            </div><!-- footer-links -->
+    <footer class="main-footer row clearfix">
+        <div class="footer-links column column-single">
+            <a href="#">#visitsedona</a>
+        </div><!-- footer-links -->
 
-            <div class="footer-socials column column-single">
-                <a class="btn btn-social btn-social-tw" href="#">Twitter</a>
-                <a class="btn btn-social btn-social-fb" href="#">Facebook</a>
-                <a class="btn btn-social btn-social-yt" href="#">Youtube</a>
-            </div><!-- footer-socials -->
+        <div class="footer-socials column column-single">
+            <a class="btn btn-social btn-social-tw" href="#">Twitter</a>
+            <a class="btn btn-social btn-social-fb" href="#">Facebook</a>
+            <a class="btn btn-social btn-social-yt" href="#">Youtube</a>
+        </div><!-- footer-socials -->
 
-            <div class="footer-copyright column column-single">
-                website by <a class="logo-htmlacademy" href="https://htmlacademy.ru/">logo-htmlacademy</a>
-            </div><!-- footer-copyright -->
-        </footer><!-- main-footer -->
-    </div><!-- container -->
+        <div class="footer-copyright column column-single">
+            website by <a class="logo-htmlacademy" href="https://htmlacademy.ru/">logo-htmlacademy</a>
+        </div><!-- footer-copyright -->
+    </footer><!-- main-footer -->
 </body>
 </html>

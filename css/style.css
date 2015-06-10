@@ -53,15 +53,12 @@ h1, h2 {
 
 /*
     Основные классы сеточной структуры
-    Тест сетки: https://jsfiddle.net/1t95298x/3/
+    Тест сетки: https://jsfiddle.net/1t95298x/4/
 */
-.container {
+.row {
     max-width: 1200px;
     min-width: 768px;
     margin: 0 auto;
-}
-.row {
-
 }
 
 .column {
@@ -133,21 +130,31 @@ h1, h2 {
     справа (от 5.9% до 6.8%) => 6.5%
 По Т.З. - Главное меню и футер совпадают с главной страницей.
 */
-.hotels-container .column:first-child {
-    width: 28%;
+.hotels-row .column:first-child {
     padding-left: 5%;
 }
-.hotels-container .column:last-child {
-    width: 26.5%;
+.hotels-row .column:last-child {
     padding-right: 6.5%;
 }
-.hotels-container .column:first-child:last-child {
+
+.hotels-row .column-single:first-child {
+    width: 28%; /* 33% - 5% */
+}
+.hotels-row .column-single:last-child {
+    width: 26.5%; /* 33% - 6.5% */
+}
+.hotels-row .column-double:first-child {
+    width: 62%; /* 67% - 5% */
+}
+.hotels-row .column-double:last-child {
+    width: 61.5%; /* 67% - 6.5% */
+}
+.hotels-row .column:first-child:last-child {
     width: auto;
 }
 
-.hotels-container .catalog-row {
+.hotels-row .catalog-row {
     padding-left: 5%;
     padding-right: 6.5%;
 }
-
 /*---------------------------------------------------------------------------*/
