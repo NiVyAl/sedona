@@ -44,7 +44,6 @@ h1, h2 {
 /*
     Временный стиль для визуального контроля построения сетки
 */
-.container,
 .row,
 .column {
     outline: 1px dashed  rgba(0,0,0,.2);
@@ -94,23 +93,29 @@ h1, h2 {
 
 }
 .main-footer {
-
+    padding-top: 37px;
+    padding-bottom: 37px;
 }
 
 /*
     index.html
 */
-.intro {
-
+.intro .intro-footer {
+    padding-bottom: 50px;
 }
-.features {
-
+.features .feature-description {
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
-.advices {
-
+.advices .advice-description {
+    padding-top: 50px;
+    padding-bottom: 60px;
 }
 .search {
-
+    padding-top: 50px;
+}
+.search .search-form.hidden {
+    display: none;
 }
 .map {
 
