@@ -133,19 +133,19 @@ h1, h2 {
     справа (от 5.9% до 6.8%) => 6.5%
 По Т.З. - Главное меню и футер совпадают с главной страницей.
 */
-.hotels-filters .column:first-child {
+.hotels-container .column:first-child {
     width: 28%;
     padding-left: 5%;
 }
-.hotels-filters .column:last-child {
+.hotels-container .column:last-child {
     width: 26.5%;
     padding-right: 6.5%;
 }
-.hotels-filters .column:first-child:last-child {
+.hotels-container .column:first-child:last-child {
     width: auto;
 }
 
-.hotels-catalog .catalog-row {
+.hotels-container .catalog-row {
     padding-left: 5%;
     padding-right: 6.5%;
 }
