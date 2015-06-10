@@ -138,9 +138,10 @@ h1, h2 {
 
 По Т.З. - Главное меню и футер совпадают с главной страницей.
 */
-.hotels-row .column:first-child,
-.hotels-row .column:last-child {
+.hotels-row .column:first-child {
     padding-left: 5%;
+}
+.hotels-row .column:last-child {
     padding-right: 5%;
 }
 
