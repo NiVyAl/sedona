@@ -34,6 +34,14 @@ h1, h2 {
 */
 
 /*
+Т.З. - Сетка:
+    1) диапазон ширин от 768px до 1200px
+    2) контентная область центрируется и не может быть уже макетной ширины
+    3) при достижении 1200px сетка перестаёт масштабироваться дальше
+    4) три колонки равной ширины (33%), стоящие вплотную друг к другу без отступов
+*/
+
+/*
     Временный стиль для визуального контроля построения сетки
 */
 .container,
@@ -45,21 +53,43 @@ h1, h2 {
 
 /*
     Основные классы сеточной структуры
+    !important - исключаем переопределение параметров влияющих на размеры сетки
+    Тест сетки: https://jsfiddle.net/1t95298x/3/
+
 */
 .container {
-
+    max-width: 1200px;
+    min-width: 768px;
+    margin: 0 auto;
 }
 .row {
 
 }
+
 .column {
-
+    float: left;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    border-left: none !important;
+    border-right: none !important;
 }
-.column-single {
+.column:last-child {
+    float: right;
+}
+.column:only-child {
+    float: none;
+}
 
+.column-single {
+    width: 33% !important;
 }
 .column-double {
-
+    width: 67% !important;
+}
+.column-single:not(:first-child):not(:last-child) {
+    width: 34% !important;
 }
 
 /*
