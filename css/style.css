@@ -130,29 +130,27 @@ h1, h2 {
     общего контейнера. Величина отступов зависит от ширины контейнера.
     При общей ширине 768px - 30px слева / 32px справа  ~= 3.9% / 4.2%
     При общей ширине 1200px - 71px слева / 82px справа ~= 5.9% / 6.8%
+
     Учитывая неочевидность поведения отступов, временное решение - усреднение:
-    слева (от 3.9% до 5.9%) => 5%
+    слева (от 3.9% до 5.9%) => 4.9%
     справа (от 4.2% до 6.8%) => 5.5%
+    Учитывая небольшую разницу в 0.6% и удобство расчетов, пусть отступы будут равны 5%.
+
 По Т.З. - Главное меню и футер совпадают с главной страницей.
 */
-.hotels-row .column:first-child {
-    padding-left: 5%;
-}
+.hotels-row .column:first-child,
 .hotels-row .column:last-child {
-    padding-right: 5.5%;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
-.hotels-row .column-single:first-child {
+.hotels-row .column-single:first-child,
+.hotels-row .column-single:last-child {
     width: 28%; /* 33% - 5% */
 }
-.hotels-row .column-single:last-child {
-    width: 27.5%; /* 33% - 5.5% */
-}
-.hotels-row .column-double:first-child {
-    width: 62%; /* 67% - 5% */
-}
+.hotels-row .column-double:first-child,
 .hotels-row .column-double:last-child {
-    width: 61.5%; /* 67% - 5.5% */
+    width: 62%; /* 67% - 5% */
 }
 .hotels-row .column:first-child:last-child {
     width: auto;
@@ -160,7 +158,7 @@ h1, h2 {
 
 .hotels-row .catalog-row {
     padding-left: 5%;
-    padding-right: 5.5%;
+    padding-right: 5%;
 }
 
 .hotels-filters {
