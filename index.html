@@ -17,13 +17,13 @@
         -->
         <!-- Тест скелета шапки - https://jsfiddle.net/6ybucgyv/ -->
 
-        <header class="main-header">
+        <header class="main-header row">
             <a class="logo" href="/id99049/sedona/">лого</a>
             <nav class="main-menu clearfix">
-                <a class="main-menu-item" href="#">Информация</a>
-                <a class="main-menu-item" href="#">Фото и видео</a>
-                <a class="main-menu-item" href="#">Карта штата</a>
-                <a class="main-menu-item" href="hotels.html">Гостиницы</a>
+                <a href="#">Информация</a>
+                <a href="#">Фото и видео</a>
+                <a href="#">Карта штата</a>
+                <a href="hotels.html">Гостиницы</a>
             </nav><!-- main-menu -->
         </header><!-- main-header -->
 
@@ -34,7 +34,7 @@
         но в отличие от фотографии меняет свои пропорции
         (то есть высота остаётся постоянной, а ширина — 100%)
          -->
-        <section class="intro">
+        <section class="intro row">
             <div class="intro-poster">
                 <img class="poster" src="img/tmp/photo-01.jpg" width="1200" height="733" alt="Седона">
 
@@ -62,9 +62,9 @@
 
         <!-- ToDo:
         Классы для реализации сетки:
-            .col - колонка для контента
-            .col-single - колонка шириной 33% (34% если в середине)
-            .col-double - колонка шириной 67%
+            .column - колонка для контента
+            .column-single - колонка шириной 33% (34% если в середине)
+            .column-double - колонка шириной 67%
         -->
         <!-- Тест резиновой сетки https://jsfiddle.net/1t95298x/ -->
 
@@ -74,8 +74,8 @@
         высота подстраивается под ширину, чтобы не нарушать пропорций,
         но фото не выходит за отведённую для него зону).
         -->
-        <section class="features clearfix">
-            <div class="feature-description col col-single">
+        <section class="features row clearfix">
+            <div class="feature-description column column-single">
                 <!--
                 реализация вставки номера (атрибут [data-number]) через псевдоэлемен
                 Тест: https://jsfiddle.net/59gd5qjd/
@@ -90,14 +90,14 @@
                 </p>
             </div><!-- feature-description -->
 
-            <div class="feature-poster col col-double">
+            <div class="feature-poster column column-double">
                 <img class="poster" src="img/tmp/photo-02.jpg" width="800" height="256" alt="Городок">
             </div><!-- feature-poster -->
         </section><!-- features -->
 
 
-        <section class="advices clearfix">
-            <div class="advice-description col col-single">
+        <section class="advices row clearfix">
+            <div class="advice-description column column-single">
                 <i class="icon icon-house">house</i>
 
                 <div class="advice-title">
@@ -109,7 +109,7 @@
                 </p>
             </div><!-- advice-description -->
 
-            <div class="advice-description col col-single">
+            <div class="advice-description column column-single">
                 <i class="icon icon-food">food</i>
 
                 <div class="advice-title">
@@ -121,7 +121,7 @@
                 </p>
             </div><!-- advice-description -->
 
-            <div class="advice-description col col-single">
+            <div class="advice-description column column-single">
                 <i class="icon icon-gift">gift</i>
 
                 <div class="advice-title">
@@ -135,12 +135,12 @@
         </section><!-- advices -->
 
 
-        <section class="features clearfix">
-            <div class="feature-poster col col-double">
+        <section class="features row clearfix">
+            <div class="feature-poster column column-double">
                 <img class="poster" src="img/tmp/photo-03.jpg" width="800" height="256" alt="Мост дьявола">
             </div><!-- feature-poster -->
 
-            <div class="feature-description col col-single">
+            <div class="feature-description column column-single">
                 <div class="feature-title" data-number="2">
                     Там есть<br>
                     мост дьявола
@@ -153,8 +153,8 @@
         </section><!-- features -->
 
 
-        <section class="features clearfix">
-            <div class="feature-description col col-single">
+        <section class="features row clearfix">
+            <div class="feature-description column column-single">
                 <div class="feature-title" data-number="3">
                     Небольшая<br>
                     площадь
@@ -165,7 +165,7 @@
                 </p>
             </div><!-- feature-description -->
 
-            <div class="feature-description col col-single">
+            <div class="feature-description column column-single">
                 <div class="feature-title" data-number="4">
                     Красивая<br>
                     дорога
@@ -176,7 +176,7 @@
                 </p>
             </div><!-- feature-description -->
 
-            <div class="feature-description col col-single">
+            <div class="feature-description column column-single">
                 <div class="feature-title" data-number="5">
                     Мало<br>
                     туристов
@@ -194,7 +194,7 @@
         гостиницы (смотрите папку слоёв «search form»), необходимо дополнить
         анимацией «выезда» сверху вниз.
         -->
-        <section class="search">
+        <section class="search row">
             <div class="search-title">
                 Заинтересовались?
             </div>
@@ -236,25 +236,25 @@
         Блок карты — реализация по желанию — интерактивная карта,
         которая также масштабируется на 100% ширины.
         -->
-        <section class="map">
+        <section class="map row">
             <a href="#">
                 <img src="img/tmp/map-01.jpg" width="1280" height="747" alt="Карта расположения Седоны">
             </a>
         </section><!-- map -->
 
 
-        <footer class="main-footer clearfix">
-            <div class="footer-links col col-single">
+        <footer class="main-footer row clearfix">
+            <div class="footer-links column column-single">
                 <a href="#">#visitsedona</a>
             </div><!-- footer-links -->
 
-            <div class="footer-socials col col-single">
+            <div class="footer-socials column column-single">
                 <a class="btn btn-social btn-social-tw" href="#">Twitter</a>
                 <a class="btn btn-social btn-social-fb" href="#">Facebook</a>
                 <a class="btn btn-social btn-social-yt" href="#">Youtube</a>
             </div><!-- footer-socials -->
 
-            <div class="footer-copyright col col-single">
+            <div class="footer-copyright column column-single">
                 website by <a class="logo-htmlacademy" href="https://htmlacademy.ru/">logo-htmlacademy</a>
             </div><!-- footer-copyright -->
         </footer><!-- main-footer -->

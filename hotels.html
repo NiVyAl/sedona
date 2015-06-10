@@ -17,13 +17,13 @@
         -->
         <!-- Тест скелета шапки - https://jsfiddle.net/6ybucgyv/ -->
 
-        <header class="main-header">
+        <header class="main-header row">
             <a class="logo" href="/id99049/sedona/">лого</a>
             <nav class="main-menu clearfix">
-                <a class="main-menu-item" href="#">Информация</a>
-                <a class="main-menu-item" href="#">Фото и видео</a>
-                <a class="main-menu-item" href="#">Карта штата</a>
-                <a class="main-menu-item active" href="hotels.html">Гостиницы</a>
+                <a href="#">Информация</a>
+                <a href="#">Фото и видео</a>
+                <a href="#">Карта штата</a>
+                <a class="active" href="hotels.html">Гостиницы</a>
             </nav><!-- main-menu -->
         </header><!-- main-header -->
 
@@ -44,9 +44,9 @@
         — Блок «Стоимость в сутки» — при наведении на любой из маркеров появляется
         указатель `cursor: pointer`, делать маркеры подвижными не обязательно, цена меняться не должна.
         -->
-        <section class="hotels-filters">
+        <section class="hotels-filters row">
             <form class="filters clearfix" action="/filter" method="get">
-                <div class="filter-options col col-double clearfix">
+                <div class="filter-options column column-double clearfix">
                     <div class="options">
                         <div class="options-title">
                             Инфраструктура:
@@ -90,7 +90,7 @@
                     </div><!-- options -->
                 </div><!-- filter-options -->
 
-                <div class="filter-cost col col-single">
+                <div class="filter-cost column column-single">
                     <div class="cost-title">
                         Стоимость в сутки (Р):
                     </div>
@@ -115,7 +115,7 @@
         </section><!-- hotels-filters -->
 
 
-        <section class="hotels-catalog">
+        <section class="hotels-catalog row">
             <header class="catalog-row catalog-header clearfix">
                 <span class="result-count">Найдено: 3</span>
 
@@ -235,18 +235,18 @@
         </section><!-- hotels-catalog -->
 
 
-        <footer class="main-footer clearfix">
-            <div class="footer-links col col-single">
+        <footer class="main-footer row clearfix">
+            <div class="footer-links column column-single">
                 <a href="#">#visitsedona</a>
             </div><!-- footer-links -->
 
-            <div class="footer-socials col col-single">
+            <div class="footer-socials column column-single">
                 <a class="btn btn-social btn-social-tw" href="#">Twitter</a>
                 <a class="btn btn-social btn-social-fb" href="#">Facebook</a>
                 <a class="btn btn-social btn-social-yt" href="#">Youtube</a>
             </div><!-- footer-socials -->
 
-            <div class="footer-copyright col col-single">
+            <div class="footer-copyright column column-single">
                 website by <a class="logo-htmlacademy" href="https://htmlacademy.ru/">logo-htmlacademy</a>
             </div><!-- footer-copyright -->
         </footer><!-- main-footer -->
