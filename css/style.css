@@ -130,36 +130,43 @@ h1, h2 {
     общего контейнера. Величина отступов зависит от ширины контейнера.
     При общей ширине 768px - 30px слева / 32px справа  ~= 3.9% / 4.2%
     При общей ширине 1200px - 71px слева / 82px справа ~= 5.9% / 6.8%
-
-    Учитывая неочевидность поведения отступов, временное решение - усреднение:
-    слева (от 3.9% до 5.9%) => 4.9%
-    справа (от 4.2% до 6.8%) => 5.5%
-    Учитывая небольшую разницу в 0.6% и удобство расчетов, пусть отступы будут равны 5%.
-
 По Т.З. - Главное меню и футер совпадают с главной страницей.
 */
-.hotels-row .column:first-child {
-    padding-left: 5%;
-}
-.hotels-row .column:last-child {
-    padding-right: 5%;
-}
 
-.hotels-row .column-single:first-child,
-.hotels-row .column-single:last-child {
-    width: 28%; /* 33% - 5% */
-}
-.hotels-row .column-double:first-child,
-.hotels-row .column-double:last-child {
-    width: 62%; /* 67% - 5% */
-}
-.hotels-row .column:first-child:last-child {
-    width: auto;
-}
+/* На широком экране отступы - 5.9% слева / 6.8% справа */
+.hotels-row .column:first-child { padding-left: 5.9%; }
+.hotels-row .column:last-child { padding-right: 6.8%; }
+
+.hotels-row .column-single:first-child { width: 27.1%; /* 33% - 5.9% */ }
+.hotels-row .column-single:last-child { width: 26.2%; /* 33% - 6.8% */  }
+
+.hotels-row .column-double:first-child { width: 61.1%; /* 67% - 5.9% */ }
+.hotels-row .column-double:last-child { width: 60.2%; /* 67% - 6.8% */ }
+
+.hotels-row .column:first-child:last-child { width: auto; }
 
 .hotels-row .catalog-row {
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: 5.9%;
+    padding-right: 6.8%;
+}
+
+/* При ширине до 984px отступы - 3.9% слева / 4.2% справа */
+@media (max-width: 984px) {
+    .hotels-row .column:first-child { padding-left: 3.9%; }
+    .hotels-row .column:last-child { padding-right: 4.2%; }
+
+    .hotels-row .column-single:first-child { width: 29.1%; /* 33% - 3.9% */ }
+    .hotels-row .column-single:last-child { width: 28.8%; /* 33% - 4.2% */  }
+
+    .hotels-row .column-double:first-child { width: 63.1%; /* 67% - 3.9% */ }
+    .hotels-row .column-double:last-child { width: 62.8%; /* 67% - 4.2% */ }
+
+    .hotels-row .column:first-child:last-child { width: auto; }
+
+    .hotels-row .catalog-row {
+        padding-left: 3.9%;
+        padding-right: 4.2%;
+    }
 }
 
 .hotels-filters {
