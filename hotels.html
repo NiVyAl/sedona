@@ -3,19 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Гостиницы | Седона</title>
+    <base href="/sedona/">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 </head>
 <body class="hotels">
-    <!-- Т.З.:
-    Логотип — это ссылка на главную страницу.
-    Главное меню: четыре ячейки по 20% ширины, в каждой из них контент лежит по центру.
-    Между второй и третьей есть отступ для расположения логотипа так же шириной 20%.
-    -->
-    <!-- Тест скелета шапки - https://jsfiddle.net/6ybucgyv/ -->
-
     <header class="main-header row">
-        <a class="logo" href="/id99049/sedona/">лого</a>
+        <a class="logo" href="/">лого</a>
         <nav class="main-menu clearfix">
             <a href="#">Информация</a>
             <a href="#">Фото и видео</a>
@@ -25,14 +19,6 @@
     </header><!-- main-header -->
 
 
-    <!-- Т.З.:
-    — Фоновое фото масштабируется на 100% ширины.
-    — Фильтр: верстать с помощью формы, кнопка «Показать» отвечает за отправку формы,
-    при выключенном JavaScript должен осуществляться переход на отдельную страницу
-    (отдельную страницу верстать не нужно).
-    — Блок «Стоимость в сутки» — при наведении на любой из маркеров появляется
-    указатель `cursor: pointer`, делать маркеры подвижными не обязательно, цена меняться не должна.
-    -->
     <section class="hotels-filters row hotels-row">
         <form class="filters clearfix" action="/filter" method="get">
             <div class="filter-options column column-double clearfix">
@@ -90,11 +76,6 @@
                 </div>
 
                 <div class="cost-range">
-                    <!-- ToDo:
-                    реализация шкалы через фон блока .cost-range
-                    реализация активного участка шкалы .range-scale
-                    реализация маркеров через псевдо-элементы
-                    -->
                     <div class="range-scale"></div>
                 </div>
 
