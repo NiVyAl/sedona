@@ -103,6 +103,7 @@
     outline: 1px dashed  rgba(0,0,0,.2);
 }
 
+
 /*  Центрирование и установка диапазона ширин сайта
 ------------------------------------------------------------------------------*/
 body {
@@ -114,6 +115,7 @@ body {
     min-width: 768px;
     margin: 0 auto;
 }
+
 
 /*  Набор классов для построения сетки
 ------------------------------------------------------------------------------*/
@@ -144,47 +146,12 @@ body {
 }
 
 
-/*  Раскладка шапки сайта
-------------------------------------------------------------------------------*/
-.main-header {
-
-}
-
-
-/*  Раскладка подвала сайта
-------------------------------------------------------------------------------*/
-.main-footer {
-
-}
-
-
 /*  Раскладка index.html
 ------------------------------------------------------------------------------*/
-.intro .intro-footer {
-    padding-bottom: 50px;
-}
-.features .feature-description {
-    padding-top: 40px;
-    padding-bottom: 40px;
-}
-.advices .advice-description {
-    padding-top: 50px;
-    padding-bottom: 60px;
-}
-.search {
-    padding-top: 50px;
-}
-.search .search-form.hidden {
-    display: none;
-}
-.map {
-
-}
 
 
 /*  Раскладка hotels.html
 ------------------------------------------------------------------------------*/
-
 /* На широком экране отступы - 5.9% слева / 6.8% справа */
 .hotels-row .column:first-child { padding-left: 5.9%; }
 .hotels-row .column:last-child { padding-right: 6.8%; }
@@ -201,34 +168,6 @@ body {
     padding-left: 5.9%;
     padding-right: 6.8%;
 }
-
-/* При ширине до 984px отступы - 3.9% слева / 4.2% справа */
-@media (max-width: 984px) {
-    .hotels-row .column:first-child { padding-left: 3.9%; }
-    .hotels-row .column:last-child { padding-right: 4.2%; }
-
-    .hotels-row .column-single:first-child { width: 29.1%; /* 33% - 3.9% */ }
-    .hotels-row .column-single:last-child { width: 28.8%; /* 33% - 4.2% */  }
-
-    .hotels-row .column-double:first-child { width: 63.1%; /* 67% - 3.9% */ }
-    .hotels-row .column-double:last-child { width: 62.8%; /* 67% - 4.2% */ }
-
-    .hotels-row .column:first-child:last-child { width: auto; }
-
-    .hotels-row .catalog-row {
-        padding-left: 3.9%;
-        padding-right: 4.2%;
-    }
-}
-
-.hotels-filters {
-    padding-top: 25px;
-}
-.catalog-row {
-     padding-top: 30px;
-     padding-bottom: 30px;
-}
-
 
 
 /**
@@ -250,6 +189,7 @@ body {
 }
 
 .main-container {
+    background: #fff;
     box-shadow: 0 -5px 15px 0 rgba(0,0,0,.2);
 }
 
@@ -406,3 +346,72 @@ body {
 .footer-copyright .logo-htmlacademy {  background-position: 50% -198px; }
 .footer-copyright .logo-htmlacademy:hover { background-position: 50% -99px; }
 .footer-copyright .logo-htmlacademy:active { background-position: 50% 0; }
+
+
+/*  стилизация блока постера
+------------------------------------------------------------------------------*/
+.main-poster {
+    position: relative;
+
+    height: 510px;
+
+    overflow: hidden;
+}
+
+.main-poster > img {
+    position: absolute;
+    top: -48px;
+    left: 40%;
+
+    width: 1200px;
+    height: 733px;
+    margin-left: -480px;
+}
+
+/* слоган постера */
+.main-poster:before {
+    content: 'Welcome to the gorgeous Sedona, Because the Grand Canyon sucks!';
+
+    position: absolute;
+    top: 75px;
+    left: 50%;
+    z-index: 999;
+
+    display: block;
+    width: 458px;
+    height: 352px;
+    margin-left: -229px;
+
+    font-size: 0;
+
+    background: transparent url('../img/bg-poster-text.png') no-repeat 0 0;
+}
+
+/* нижняя маска постера */
+.main-poster:after {
+    content: '';
+
+    position: absolute;
+    bottom: 0;
+    z-index: 999;
+
+    width: 100%;
+    height: 50px;
+
+    background: transparent no-repeat;
+    background-image:
+        linear-gradient(to left bottom, transparent 50%, white 51%),
+        linear-gradient(to right bottom, transparent 50%, white 51%),
+        linear-gradient(to left bottom, transparent 50%, white 51%),
+        linear-gradient(to right bottom, transparent 50%, white 51%);
+    background-size:
+        29% 100%,
+        29% 100%,
+        50% 100%,
+        50% 100%;
+    background-position:
+        30% 0,
+        70% 0,
+        0 0,
+        100% 0;
+}
