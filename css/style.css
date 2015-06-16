@@ -1,58 +1,65 @@
-/*
-**      Раздел служебных правил
-*/
+/**
+ *  ============================================================================
+ *       Cлужебные правила
+ *  ============================================================================
+**/
 
 .clearfix::after {
     content: '';
     display: table;
     clear: both;
 }
-/*---------------------------------------------------------------------------*/
 
-/*
-**      Раздел типографики сайта
-*/
-
-body {
-    color: #333;
-    font-size: 14px;
-    line-height: 1.5;
-    font-family: "PT Sans", "Arial", sans-serif;
-    text-transform: uppercase;
+.hidden {
+    display: none;
 }
 
-h1, h2 {
-    color: #000;
-    font-size: 21px;
-    line-height: 1.238;
-    font-weight: bold;
+@font-face {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('PT Sans'), local('PTSans-Regular'),
+    url(https://fonts.gstatic.com/s/ptsans/v8/ucVW2l9YCcVE52VxGq2zIw.woff2) format('woff2'),
+    url(https://fonts.gstatic.com/s/ptsans/v8/O5pe56LvR8OXax_Q9tUMDg.woff) format('woff');
 }
-/*---------------------------------------------------------------------------*/
+@font-face {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('PT Sans Bold'), local('PTSans-Bold'),
+      url(https://fonts.gstatic.com/s/ptsans/v8/kTYfCWJhlldPf5LnG4ZnHPk_vArhqVIZ0nv9q090hN8.woff2) format('woff2'),
+      url(https://fonts.gstatic.com/s/ptsans/v8/kTYfCWJhlldPf5LnG4ZnHBsxEYwM7FgeyaSgU71cLG0.woff) format('woff');
+}
 
-/*
-**      Раздел сеточной структуры
-*/
+
+/**
+ *  ============================================================================
+ *       Сетка
+ *  ============================================================================
+**/
 
 
-/*
-    Временный стиль для визуального контроля построения сетки
-*/
+/*  Временный стиль для визуального контроля построения сетки
+------------------------------------------------------------------------------*/
 .row,
 .column {
     outline: 1px dashed  rgba(0,0,0,.2);
-    background-color: rgba(0,0,0,.1);
 }
 
+/*  Центрирование и установка диапазона ширин сайта
+------------------------------------------------------------------------------*/
+body {
+    min-width: 768px;
+}
 
-/*
-    Основные классы сеточной структуры
-*/
 .row {
     max-width: 1200px;
     min-width: 768px;
     margin: 0 auto;
 }
 
+/*  Набор классов для построения сетки
+------------------------------------------------------------------------------*/
 .column {
     float: left;
     margin-left: 0;
@@ -80,21 +87,23 @@ h1, h2 {
 }
 
 
-/*
-    Общие блоки для всех страниц
-*/
+/*  Раскладка шапки сайта
+------------------------------------------------------------------------------*/
 .main-header {
 
 }
+
+
+/*  Раскладка подвала сайта
+------------------------------------------------------------------------------*/
 .main-footer {
     padding-top: 37px;
     padding-bottom: 37px;
 }
 
 
-/*
-    index.html
-*/
+/*  Раскладка index.html
+------------------------------------------------------------------------------*/
 .intro .intro-footer {
     padding-bottom: 50px;
 }
@@ -117,9 +126,8 @@ h1, h2 {
 }
 
 
-/*
-    hotels.html
-*/
+/*  Раскладка hotels.html
+------------------------------------------------------------------------------*/
 
 /* На широком экране отступы - 5.9% слева / 6.8% справа */
 .hotels-row .column:first-child { padding-left: 5.9%; }
@@ -164,4 +172,88 @@ h1, h2 {
      padding-top: 30px;
      padding-bottom: 30px;
 }
-/*---------------------------------------------------------------------------*/
+
+
+/**
+ *  ============================================================================
+ *       Оформление и декорирование
+ *  ============================================================================
+**/
+
+body {
+    font-size: 14px;
+    line-height: 21px;
+
+    font-family: 'PT Sans', Arial, sans-serif;
+
+    text-transform: uppercase;
+
+    color: #333;
+    background: #f2f2f2;
+}
+
+
+/*  стилизация шапки сайта
+------------------------------------------------------------------------------*/
+.main-header {
+    position: relative;
+    background: #fff;
+}
+
+
+.main-menu a {
+    float: left;
+
+    width: 20%;
+    padding: 15px 0;
+
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: bold;
+
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    outline: 1px dashed rgba(0,0,0,.2);
+}
+
+.main-menu a { color: #000; }
+.main-menu a:hover { color: #81b3d2; }
+.main-menu a:active {
+    color: #000;
+    opacity: .3;
+}
+
+.main-menu .active { color: #766357; }
+.main-menu .active:hover { color: #604e43; }
+.main-menu .active:active {
+    color: #766357;
+    opacity: .3;
+}
+
+.main-menu a:nth-child(2){
+    margin-right: 20%;
+}
+
+
+.main-header .logo {
+    position: absolute;
+    z-index:99;
+    left: 50%;
+
+    display: block;
+    width: 104px;
+    height: 104px;
+    margin-left: -52px;
+
+    font-size: 0;
+
+    color: #000;
+    background: transparent url('../img/logo.png') no-repeat 0 0;
+
+    transform: translateY(-50px) rotate(-45deg);
+}
+
+.main-header .logo:hover { opacity: .8; }
+.main-header .logo:active { opacity: 1; }
