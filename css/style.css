@@ -354,6 +354,7 @@ body {
     position: relative;
 
     height: 510px;
+    margin-bottom: 54px;
 
     overflow: hidden;
 }
@@ -415,3 +416,30 @@ body {
         0 0,
         100% 0;
 }
+
+
+/*  стилизация блока intro
+------------------------------------------------------------------------------*/
+.intro {
+    margin-bottom: 55px;
+
+    line-height: 26px;
+
+    text-align: center;
+}
+
+.intro-title {
+    width: 450px;
+    margin: auto;
+    margin-bottom: 30px;
+
+    font-size: 21px;
+    line-height: 26px;
+
+    color: #000;
+}
+
+
+
+/*  стилизация блока
+------------------------------------------------------------------------------*/
