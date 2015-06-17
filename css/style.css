@@ -4,6 +4,13 @@
  *  ============================================================================
 **/
 
+.hidden {
+    display: none;
+}
+
+
+/*  Набор классов для построения сетки
+------------------------------------------------------------------------------*/
 .clearfix::before,
 .clearfix::after {
     content: '';
@@ -11,11 +18,22 @@
     clear: both;
 }
 
-.hidden {
-    display: none;
+.column {
+    float: left;
+    width: 33.33%;
+}
+
+.column:last-child {
+    float: right;
+}
+
+.column-double {
+    width: 66.67%;
 }
 
 
+/*  Web fonts
+------------------------------------------------------------------------------*/
 @font-face {
   font-family: 'PT Sans';
   font-style: normal;
@@ -35,6 +53,8 @@
 }
 
 
+/*  Icon fonts
+------------------------------------------------------------------------------*/
 @font-face {
     font-family: 'symbols-sedona';
     src: url('../font/symbols-sedona.eot?60737633');
@@ -76,81 +96,38 @@
     /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
 
-.icon-facebook::before { content: '\66'; } /* 'f' */
-.icon-twitter::before { content: '\74'; } /* 't' */
-.icon-up-dir::before { content: '\25b2'; } /* '▲' */
-.icon-down-dir::before { content: '\25bc'; } /* '▼' */
-.icon-star::before { content: '\2605'; } /* '★' */
-.icon-check-off::before { content: '\2610'; } /* '☐' */
-.icon-check-on::before { content: '\2611'; } /* '☑' */
-.icon-calendar::before { content: '\e800'; } /* '' */
-.icon-plus::before { content: '\e801'; } /* '' */
-.icon-minus::before { content: '\e802'; } /* '' */
-.icon-youtube::before { content: '\f39e'; } /* '' */
-
-
-
-/**
- *  ============================================================================
- *       Сетка
- *  ============================================================================
-**/
-
-/*  Временный стиль для визуального контроля построения сетки
-------------------------------------------------------------------------------*/
-.row,
-.column {
-    outline: 1px dashed  rgba(0,0,0,.2);
+.icon-facebook::before {
+    content: '\66';  /* 'f' */
 }
-
-
-/*  Центрирование и установка диапазона ширин сайта
-------------------------------------------------------------------------------*/
-.main-container {
-    overflow: hidden;
-    max-width: 1200px;
-    min-width: 768px;
-    margin: 0 auto;
+.icon-twitter::before {
+    content: '\74';  /* 't' */
 }
-
-
-/*  Набор классов для построения сетки
-------------------------------------------------------------------------------*/
-.column {
-    float: left;
-    width: 33.33%;
+.icon-up-dir::before {
+    content: '\25b2';  /* '▲' */
 }
-
-.column:last-child {
-    float: right;
+.icon-down-dir::before {
+    content: '\25bc';  /* '▼' */
 }
-
-.column-double {
-    width: 66.67%;
+.icon-star::before {
+    content: '\2605';  /* '★' */
 }
-
-
-/*  Раскладка index.html
-------------------------------------------------------------------------------*/
-
-
-/*  Раскладка hotels.html
-------------------------------------------------------------------------------*/
-/* На широком экране отступы - 5.9% слева / 6.8% справа */
-.hotels-row .column:first-child { padding-left: 5.9%; }
-.hotels-row .column:last-child { padding-right: 6.8%; }
-
-.hotels-row .column-single:first-child { width: 27.1%; /* 33% - 5.9% */ }
-.hotels-row .column-single:last-child { width: 26.2%; /* 33% - 6.8% */  }
-
-.hotels-row .column-double:first-child { width: 61.1%; /* 67% - 5.9% */ }
-.hotels-row .column-double:last-child { width: 60.2%; /* 67% - 6.8% */ }
-
-.hotels-row .column:first-child:last-child { width: auto; }
-
-.hotels-row .catalog-row {
-    padding-left: 5.9%;
-    padding-right: 6.8%;
+.icon-check-off::before {
+    content: '\2610';  /* '☐' */
+}
+.icon-check-on::before {
+    content: '\2611';  /* '☑' */
+}
+.icon-calendar::before {
+    content: '\e800';  /* '' */
+}
+.icon-plus::before {
+    content: '\e801';  /* '' */
+}
+.icon-minus::before {
+    content: '\e802';  /* '' */
+}
+.icon-youtube::before {
+    content: '\f39e';  /* '' */
 }
 
 
@@ -172,10 +149,16 @@ body {
     background: #f2f2f2;
 }
 
-.main-container {
-    background: #fff;
-    box-shadow: 0 -5px 15px 0 rgba(0,0,0,.2);
-}
+    .main-container {
+        overflow: hidden;
+
+        max-width: 1200px;
+        min-width: 768px;
+        margin: 0 auto;
+
+        background: #fff;
+        box-shadow: 0 -5px 15px 0 rgba(0,0,0,.2);
+    }
 
 
 /*  стилизация шапки сайта
@@ -185,168 +168,198 @@ body {
     background: #fff;
 }
 
-.main-menu ul {
-    font-size: 0;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-    .main-menu li {
-        display: inline-block;
-        vertical-align: top;
-        width: 20%;
+    .main-header .logo {
+        position: absolute;
+        z-index:99;
+        left: 50%;
 
-        outline: 1px dashed rgba(0,0,0,.2);
-    }
-
-    .main-menu li:nth-child(2) {
-        margin-right: 20%;
-    }
-
-    .main-menu a {
         display: block;
-        padding: 15px 0;
+        width: 138px;
+        height: 70px;
+        margin-left: -69px;
 
-        font-size: 14px;
-        line-height: 26px;
+        font-size: 0;
+        line-height: 0;
 
-        font-weight: bold;
-
-        text-align: center;
-        text-decoration: none;
+        color: transparent;
+        background: transparent url('../img/logo.png') no-repeat 0 0;
     }
 
-.main-menu a { 
-    color: #000; 
-}
-.main-menu a:hover { color: #81b3d2; }
-.main-menu a:active {
-    color: #000;
-    opacity: .3;
-}
+    .main-menu ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-size: 0;
+    }
 
-.main-menu .active { color: #766357; }
-.main-menu .active:hover { color: #604e43; }
-.main-menu .active:active {
-    color: #766357;
-    opacity: .3;
-}
+        .main-menu li {
+            display: inline-block;
+            vertical-align: top;
+            width: 20%;
+        }
 
+        .main-menu li:nth-child(2) {
+            margin-right: 20%;
+        }
 
-.main-header .logo {
-    position: absolute;
-    z-index:99;
-    left: 50%;
+            .main-menu a {
+                display: block;
+                padding: 15px 0;
 
-    display: block;
-    width: 104px;
-    height: 104px;
-    margin-left: -52px;
+                font-size: 14px;
+                line-height: 26px;
 
-    font-size: 0;
+                font-weight: bold;
 
-    color: #000;
-    background: transparent url('../img/logo.png') no-repeat 0 0;
+                text-align: center;
+                text-decoration: none;
+            }
 
-    transform: translateY(-50px) rotate(-45deg);
-    transition: opacity 0.3s;
-}
+            .main-menu a {
+                color: #000;
+            }
 
-.main-header .logo:hover { opacity: .8; }
-.main-header .logo:active { opacity: 1; }
+            .main-menu a:hover {
+                color: #81b3d2;
+            }
+
+            .main-menu a:active {
+                color: #000;
+                opacity: .3;
+            }
+
+            .main-menu .active {
+                color: #766357;
+            }
+
+            .main-menu .active:hover {
+                color: #604e43;
+            }
+
+            .main-menu .active:active {
+                color: #766357;
+                opacity: .3;
+            }
 
 
 /*  стилизация подвала сайта
 ------------------------------------------------------------------------------*/
 .main-footer {
-    padding: 36px 0;
+    padding-top: 36px;
+    padding-bottom: 30px;
 
     text-align: center;
 
     background: rgba(254,254,254,.9);
 }
 
+    .footer-links {
+        padding: 11px 0;
+    }
 
-.footer-links {
-    padding: 11px 0;
-}
+        .footer-links a {
+            font-size: 21px;
+            line-height: 26px;
 
-.footer-links a {
-    font-size: 21px;
-    line-height: 26px;
+            font-weight: bold;
 
-    font-weight: bold;
+            text-decoration: none;
+        }
 
-    text-decoration: none;
-}
+        .footer-links a {
+            color: #000;
+        }
 
-.footer-links a { color: #000; }
-.footer-links a:hover { color: #81b3d2; }
-.footer-links a:active {
-    color: #000;
-    opacity: .3;
-}
+        .footer-links a:hover {
+            color: #81b3d2;
+        }
 
+        .footer-links a:active {
+            color: #000;
+            opacity: .3;
+        }
 
-.footer-socials {
-    font-size: 0;
-}
+    .footer-socials {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-size: 0;
+    }
 
-.footer-socials .btn-social {
-    display: inline-block;
-    vertical-align: top;
+        .footer-socials li {
+            display: inline-block;
+            vertical-align: top;
+        }
 
-    width: 46px;
-    height: 48px;
-    margin-right: 6px;
+            .btn-social {
+                display:  block;
+                width: 46px;
+                height: 48px;
+                margin-right: 6px;
+                margin-bottom: 6px;
 
-    font-size: 0;
-    text-decoration: none;
+                font-size: 0;
+                text-decoration: none;
 
-    background: #81b3d2;
-}
+                background: #81b3d2;
+            }
 
-.footer-socials .btn-social::before {
-    font-size: 20px;
-    line-height: 48px;
-    color: #fff;
-}
+            .btn-social:hover {
+                background: #669ec0;
+            }
 
-.footer-socials .btn-social:hover { background: #669ec0; }
-.footer-socials .btn-social:active { background: #5496bd; }
-.footer-socials .btn-social:active::before { opacity: .3; }
+            .btn-social:active {
+                background: #5496bd;
+            }
 
+            .btn-social::before {
+                font-size: 20px;
+                line-height: 48px;
+                color: #fff;
+            }
 
-.footer-copyright {
-    font-size: 14px;
-    line-height: 48px;
-}
+            .btn-social:active::before {
+                opacity: .3;
+            }
 
-.footer-copyright .logo-htmlacademy {
-    display: inline-block;
-    vertical-align: top;
+    .footer-copyright {
+        font-size: 14px;
+        line-height: 48px;
+    }
 
-    width: 113px;
-    height: 39px;
-    margin-left: 8px;
-    margin-top: 8px;
+        .logo-htmlacademy {
+            display: inline-block;
+            vertical-align: top;
 
-    font-size: 0;
+            width: 113px;
+            height: 39px;
+            margin-left: 8px;
+            margin-top: 8px;
 
-    text-decoration: none;
+            font-size: 0;
 
-    background: transparent url('../img/sprites-logo-htmlacademy.png') no-repeat;
-}
+            text-decoration: none;
 
-.footer-copyright .logo-htmlacademy {  background-position: 50% -198px; }
-.footer-copyright .logo-htmlacademy:hover { background-position: 50% -99px; }
-.footer-copyright .logo-htmlacademy:active { background-position: 50% 0; }
+            background: transparent url('../img/sprites-logo-htmlacademy.png') no-repeat;
+        }
+
+        .logo-htmlacademy {
+            background-position: 50% -198px;
+        }
+
+        .logo-htmlacademy:hover {
+            background-position: 50% -99px;
+        }
+
+        .logo-htmlacademy:active {
+            background-position: 50% 0;
+        }
 
 
 /*  стилизация блока постера
 ------------------------------------------------------------------------------*/
 .main-poster {
-    background: url(../img/tmp/photo-01.jpg) no-repeat 50% 12%;
+    background: url(../img/bg-main-poster.jpg) no-repeat 50% 30%;
     background-size: cover;
     position: relative;
 
@@ -355,55 +368,55 @@ body {
 
     overflow: hidden;
 }
+    /* нижняя маска постера */
+    .main-poster:after {
+        content: '';
 
-/* слоган постера */
-.main-poster:before {
-    content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 999;
 
-    position: absolute;
-    top: 75px;
-    left: 50%;
-    z-index: 999;
+        width: 100%;
+        height: 57px;
 
-    display: block;
-    width: 458px;
-    height: 352px;
-    margin-left: -229px;
+        background: transparent url("../img/bg-poster-mask.png") no-repeat;
+        background-position: 0 50%;
+        background-size: 100% 57px;
+    }
 
-    font-size: 0;
+    .slogan {
+        position: absolute;
+        left: 50%;
+        z-index: 999;
 
-    background: transparent url('../img/bg-poster-text.png') no-repeat 0 0;
-}
+        display: block;
+        width: 458px;
+        height: 90px;
+        margin-left: -229px;
 
-/* нижняя маска постера */
-.main-poster:after {
-    content: '';
+        font-size: 0;
+        line-height: 0;
 
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    z-index: 999;
+        color: transparent;
+        background: transparent url('../img/bg-poster-text.png') no-repeat;
+    }
 
-    width: 100%;
-    height: 50px;
+    .slogan-welcome {
+        top: 75px;
+        background-position: 0 0;
+    }
 
-    background: transparent no-repeat;
-    background-image:
-        linear-gradient(to left bottom, transparent 50%, white 51%),
-        linear-gradient(to right bottom, transparent 50%, white 51%),
-        linear-gradient(to left bottom, transparent 50%, white 51%),
-        linear-gradient(to right bottom, transparent 50%, white 51%);
-    background-size:
-        29% 100%,
-        29% 100%,
-        50% 100%,
-        50% 100%;
-    background-position:
-        30% 0,
-        70% 0,
-        0 0,
-        100% 0;
-}
+    .slogan-sedona {
+        top: 207px;
+        background-position: 0 -132px;
+    }
+
+    .slogan-cite {
+        top: 337px;
+        background-position: 0 -262px;
+    }
 
 
 /*  стилизация блока intro
@@ -416,100 +429,137 @@ body {
     text-align: center;
 }
 
-.intro-title {
-    width: 450px;
-    margin: auto;
-    margin-bottom: 30px;
+    .intro-title {
+        width: 450px;
+        margin: 0 auto;
+        margin-bottom: 30px;
 
-    font-size: 21px;
-    line-height: 26px;
+        font-size: 21px;
+        line-height: 26px;
 
-    color: #000;
-}
-
+        color: #000;
+    }
 
 
 /*  стилизация блоков features
 ------------------------------------------------------------------------------*/
-/*
-    <section class="features features-open row clearfix">
-        <div class="feature-poster column column-double">
-            <img class="poster" src="img/tmp/photo-03.jpg" width="100%" alt="Мост дьявола">
-        </div>
-
-        <div class="feature-description column column-single">
-            <div class="feature-title">
-                Там есть<br>
-                мост дьявола
-            </div>
-
-            <p>
-                Да, по нему можно пройти! Если конечно вы осмелитесь
-            </p>
-        </div>
-    </section>
-*/
 .features {
     height: 256px;
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
 }
-.features.features-open {
+
+.features-open {
     color: #fff;
     background: #81b3d2;
 }
 
-.feature-description {
-    margin-top: 5%;
-    text-align: center;
-}
-
-.feature-description p {
-    margin: 0 18%;
-}
-
-.feature-title {
-    margin-bottom: 23px;
-
-    font-size: 21px;
-    line-height: 26px;
-
-    font-weight: bold;
-}
-
-/* реализация номеров для feature-title */
-.main-container {
-    counter-reset: feature-number;
-}
-
-.feature-title::after {
-    content: "— №" counter(feature-number) " —";
-    counter-increment: feature-number;
-
-    padding-top: 10px;
-
-    display: block;
-
-    font-size: 14px;
-    line-height: 21px;
-    font-weight: normal;
-}
-
-/* реализация постера */
-.feature-poster {
-    height: 256px;
-    overflow: hidden;
-}
-
-.feature-poster img {
-    display: block;
-    width: 100;
-}
-
-@media (min-width: 960px) {
-    .feature-poster img {
-        margin-top: -10%;
+    .feature-description {
+        margin-top: 5%;
+        text-align: center;
     }
+
+        .feature-title {
+            margin-bottom: 10px;
+
+            font-size: 21px;
+            line-height: 26px;
+
+            font-weight: bold;
+        }
+
+        .feature-number {
+            display: block;
+            margin-bottom: 23px;
+
+            font-size: 14px;
+            line-height: 21px;
+
+            font-weight: normal;
+        }
+
+        .feature-description p {
+            margin: 0 18%;
+        }
+
+    .feature-poster {
+        height: 256px;
+        overflow: hidden;
+    }
+
+        .feature-poster img {
+            display: block;
+            width: 100%;
+        }
+
+        @media (min-width: 960px) {
+            .feature-poster img {
+                margin-top: -10%;
+            }
+        }
+
+
+/*  стилизация блоков advices
+------------------------------------------------------------------------------*/
+.advices {
+    height: 330px;
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    outline: 1px dashed  rgba(0,0,0,.2);
 }
 
+    .advice-description {
+        margin-top: 55px;
+        text-align: center;
+    }
 
-/*  стилизация блоков
+        .advice-title {
+            position: relative;
+
+            margin-bottom: 25px;
+            padding-top: 105px;
+
+            font-size: 21px;
+            line-height: 26px;
+
+            font-weight: bold;
+        }
+            .advice-title::before {
+                content: '';
+
+                position: absolute;
+                left: 50%;
+                top: 0;
+
+                display: block;
+                width: 76px;
+                height: 76px;
+                margin-left: -38px;
+
+                background: transparent url("../img/sprites-icons.png") no-repeat;
+            }
+
+            .advice-title-food::before {
+                background-position: 0 0;
+            }
+
+            .advice-title-gift::before {
+                background-position: 0 -152px;
+            }
+
+            .advice-title-house::before {
+                background-position: 0 -304px;
+            }
+
+        .advice-description p {
+            margin: 0 17%;
+        }
+
+
+/*  стилизация блока choose-hotel
 ------------------------------------------------------------------------------*/

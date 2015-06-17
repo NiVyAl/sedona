@@ -3,24 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <title>Гостиницы | Седона</title>
-    <!-- <base href="/sedona/"> -->
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 </head>
 <body class="hotels">
-    <div class="main-container">
-        <header class="main-header row">
+    <div class="main-container">>
+        <header class="main-header">
             <a class="logo" href="index.html">лого</a>
             <nav class="main-menu clearfix">
-                <a href="#">Информация</a>
-                <a href="#">Фото и видео</a>
-                <a href="#">Карта штата</a>
-                <a class="active" href="hotels.html">Гостиницы</a>
-            </nav><!-- main-menu -->
-        </header><!-- main-header -->
+                <ul>
+                    <li><a href="#">Информация</a></li>
+                    <li><a href="#">Фото и видео</a></li>
+                    <li><a href="#">Карта штата</a></li>
+                    <li><a class="active" href="hotels.html">Гостиницы</a></li>
+                </ul>
+            </nav>
+        </header>
 
 
-        <section class="hotels-filters row hotels-row">
+        <div class="hotels-filters row hotels-row">
             <form class="filters clearfix" action="/filter" method="get">
                 <div class="filter-options column column-double clearfix">
                     <div class="options">
@@ -42,7 +43,7 @@
                             <input type="checkbox" name="facilities[]" value="val3">
                             Wi-Fi
                         </label>
-                    </div><!-- options -->
+                    </div>
 
                     <div class="options">
                         <div class="options-title">
@@ -63,8 +64,8 @@
                             <input type="checkbox" name="housing[]" value="val3" checked>
                             Апартаменты
                         </label>
-                    </div><!-- options -->
-                </div><!-- filter-options -->
+                    </div>
+                </div>
 
                 <div class="filter-cost column column-single">
                     <div class="cost-title">
@@ -81,12 +82,12 @@
                     </div>
 
                     <input type="submit" value="Показать">
-                </div><!-- filter-cost -->
-            </form><!-- filters -->
-        </section><!-- hotels-filters -->
+                </div>
+            </form>
+        </div>
 
 
-        <section class="hotels-catalog row hotels-row">
+        <main class="hotels-catalog row hotels-row">
             <header class="catalog-row catalog-header clearfix">
                 <span class="result-count">Найдено: 3</span>
 
@@ -102,8 +103,8 @@
                     <a class="active" href="#">
                         <i class="icon icon-down">down</i>
                     </a>
-                </div><!-- sort-order -->
-            </header><!-- catalog-row catalog-header -->
+                </div>
+            </header>
 
             <div class="catalog-row clearfix">
                 <div class="hotel-info">
@@ -123,8 +124,8 @@
                             ОТ 3500 Р.
                             <a href="#" class="btn btn-action">Забронировать</a>
                         </div>
-                    </div><!-- hotel-description -->
-                </div><!-- hotel-info -->
+                    </div>
+                </div>
 
                 <div class="hotel-rating">
                     <div class="hotel-stars">
@@ -136,8 +137,8 @@
                     <p>
                         Рейтинг: 8,5
                     </p>
-                </div><!-- hotel-rating -->
-            </div><!-- catalog-row -->
+                </div>
+            </div>
 
             <div class="catalog-row clearfix">
                 <div class="hotel-info">
@@ -157,8 +158,8 @@
                             ОТ 2000 Р.
                             <a href="#" class="btn btn-action">Забронировать</a>
                         </div>
-                    </div><!-- hotel-description -->
-                </div><!-- hotel-info -->
+                    </div>
+                </div>
 
                 <div class="hotel-rating">
                     <div class="hotel-stars">
@@ -168,8 +169,8 @@
                     <p>
                         Рейтинг: 8,9
                     </p>
-                </div><!-- hotel-rating -->
-            </div><!-- catalog-row -->
+                </div>
+            </div>
 
             <div class="catalog-row clearfix">
                 <div class="hotel-info">
@@ -189,8 +190,8 @@
                             ОТ 4000 Р.
                             <a href="#" class="btn btn-action">Забронировать</a>
                         </div>
-                    </div><!-- hotel-description -->
-                </div><!-- hotel-info -->
+                    </div>
+                </div>
 
                 <div class="hotel-rating">
                     <div class="hotel-stars">
@@ -201,26 +202,26 @@
                     <p>
                         Рейтинг: 9,2
                     </p>
-                </div><!-- hotel-rating -->
-            </div><!-- catalog-row -->
-        </section><!-- hotels-catalog -->
+                </div>
+            </div>
+        </main>
 
 
         <footer class="main-footer row clearfix">
             <div class="footer-links column column-single">
                 <a href="#">#visitsedona</a>
-            </div><!-- footer-links -->
+            </div>
 
             <div class="footer-socials column column-single">
                 <a class="btn-social icon-twitter" href="#">Twitter</a>
                 <a class="btn-social icon-facebook" href="#">Facebook</a>
                 <a class="btn-social icon-youtube" href="#">Youtube</a>
-            </div><!-- footer-socials -->
+            </div>
 
             <div class="footer-copyright column column-single">
                 website by <a class="logo-htmlacademy" href="https://htmlacademy.ru/">logo-htmlacademy</a>
-            </div><!-- footer-copyright -->
-        </footer><!-- main-footer -->
-    </div><!-- main-container -->
+            </div>
+        </footer>
+    </div>
 </body>
 </html>
