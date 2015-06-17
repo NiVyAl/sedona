@@ -441,5 +441,87 @@ body {
 
 
 
-/*  стилизация блока
+/*  стилизация блоков features
+------------------------------------------------------------------------------*/
+/*
+    <section class="features features-open row clearfix">
+        <div class="feature-poster column column-double">
+            <img class="poster" src="img/tmp/photo-03.jpg" width="100%" alt="Мост дьявола">
+        </div>
+
+        <div class="feature-description column column-single">
+            <div class="feature-title">
+                Там есть<br>
+                мост дьявола
+            </div>
+
+            <p>
+                Да, по нему можно пройти! Если конечно вы осмелитесь
+            </p>
+        </div>
+    </section>
+*/
+.features {
+    height: 256px;
+}
+.features.features-open {
+    color: #fff;
+    background: #81b3d2;
+}
+
+.feature-description {
+    margin-top: 5%;
+    text-align: center;
+}
+
+.feature-description p {
+    margin: 0 18%;
+}
+
+.feature-title {
+    margin-bottom: 23px;
+
+    font-size: 21px;
+    line-height: 26px;
+
+    font-weight: bold;
+}
+
+/* реализация номеров для feature-title */
+.main-container {
+    counter-reset: feature-number;
+}
+
+.feature-title::after {
+    content: "— №" counter(feature-number) " —";
+    counter-increment: feature-number;
+
+    padding-top: 10px;
+
+    display: block;
+
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: normal;
+}
+
+/* реализация постера */
+.feature-poster {
+    height: 256px;
+    overflow: hidden;
+}
+
+.feature-poster img {
+    display: block;
+    width: 100;
+}
+
+@media (min-width: 960px) {
+    .feature-poster img {
+        margin-top: -10%;
+    }
+}
+
+
+/*  стилизация блоков
 ------------------------------------------------------------------------------*/
