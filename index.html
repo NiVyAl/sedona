@@ -12,44 +12,53 @@
         <header class="main-header row">
             <a class="logo" href="index.html">лого</a>
             <nav class="main-menu clearfix">
-                <a href="#">Информация</a>
-                <a href="#">Фото и видео</a>
-                <a href="#">Карта штата</a>
-                <a href="hotels.html">Гостиницы</a>
-            </nav><!-- main-menu -->
-        </header><!-- main-header -->
+                <ul>
+                    <li><a href="#">Информация</a></li>
+                    <li><a href="#">Фото и видео</a></li>
+                    <li><a href="#">Карта штата</a></li>
+                    <li><a href="hotels.html">Гостиницы</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <main class="content">
+            <div class="main-poster row">
+                <!--
+                    https://css-tricks.com/examples/ImageReplacement/ 
+                    Использовать одну из этих техник, чтобы заменить все тексты на картинки
+                -->
+                <span class="main-poster-titleWelcome">Welcome to the gorgeous</span>
+                <span class="main-poster-sedona">Sedona</span>
+                <!--
+                    http://web-standards.ru/articles/cite-blockquote-reloaded/
+                -->
+                <blockquote>Because the Grand Canyon sucks</blockquote>
+            </div> 
+
+            <section class="intro row">
+                <h1 class="intro-title">
+                    Седона — небольшой городок в Аризоне, заслуживающий большего!
+                </h1>
+                <p>Рассмотрим 5 причин, по которым Седона круче чем гранд каньон!</p>
+            </section>
 
 
-        <section class="main-poster row">
-            <img src="img/tmp/photo-01.jpg" width="1200" height="733" alt="Welcome to the gorgeous Sedona">
-        </section><!-- main-poster -->
+            <div class="features features-open row clearfix">
+                <div class="feature-description column column-single">
+                    <div class="feature-title">
+                        Настоящий<br>
+                        городок
+                    </div>
 
+                    <p>
+                        Седона не атракцион для туристов, там течет своя жизнь
+                    </p>
+                </div><!-- feature-description -->
 
-        <section class="intro row">
-            <h1 class="intro-title">
-                Седона — небольшой городок в Аризоне, заслуживающий большего!
-            </h1>
-            Рассмотрим 5 причин, по которым Седона круче чем гранд каньон!
-        </section><!-- intro -->
-
-
-        <section class="features features-open row clearfix">
-            <div class="feature-description column column-single">
-                <div class="feature-title">
-                    Настоящий<br>
-                    городок
-                </div>
-
-                <p>
-                    Седона не атракцион для туристов, там течет своя жизнь
-                </p>
-            </div><!-- feature-description -->
-
-            <div class="feature-poster column column-double">
-                <img class="poster" src="img/tmp/photo-02.jpg" width="100%" alt="Городок">
-            </div><!-- feature-poster -->
-        </section><!-- features -->
-
+                <div class="feature-poster column column-double">
+                    <img class="poster" src="img/tmp/photo-02.jpg" width="100%" alt="Городок">
+                </div><!-- feature-poster -->
+            </div><!-- features -->
 
         <section class="advices row clearfix">
             <div class="advice-description column column-single">

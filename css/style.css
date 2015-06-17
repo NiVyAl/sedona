@@ -106,11 +106,8 @@
 
 /*  Центрирование и установка диапазона ширин сайта
 ------------------------------------------------------------------------------*/
-body {
-    min-width: 768px;
-}
-
 .main-container {
+    overflow: hidden;
     max-width: 1200px;
     min-width: 768px;
     margin: 0 auto;
@@ -121,28 +118,15 @@ body {
 ------------------------------------------------------------------------------*/
 .column {
     float: left;
-    margin-left: 0;
-    margin-right: 0;
-    padding-left: 0;
-    padding-right: 0;
-    border-left: none;
-    border-right: none;
+    width: 33.33%;
 }
+
 .column:last-child {
     float: right;
 }
-.column:only-child {
-    float: none;
-}
 
-.column-single {
-    width: 33%;
-}
 .column-double {
-    width: 67%;
-}
-.column-single:not(:first-child):not(:last-child) {
-    width: 34%;
+    width: 66.67%;
 }
 
 
@@ -201,25 +185,40 @@ body {
     background: #fff;
 }
 
-
-.main-menu a {
-    float: left;
-
-    width: 20%;
-    padding: 15px 0;
-
-    font-size: 14px;
-    line-height: 26px;
-
-    font-weight: bold;
-
-    text-align: center;
-    text-decoration: none;
-
-    outline: 1px dashed rgba(0,0,0,.2);
+.main-menu ul {
+    font-size: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
+    .main-menu li {
+        display: inline-block;
+        vertical-align: top;
+        width: 20%;
 
-.main-menu a { color: #000; }
+        outline: 1px dashed rgba(0,0,0,.2);
+    }
+
+    .main-menu li:nth-child(2) {
+        margin-right: 20%;
+    }
+
+    .main-menu a {
+        display: block;
+        padding: 15px 0;
+
+        font-size: 14px;
+        line-height: 26px;
+
+        font-weight: bold;
+
+        text-align: center;
+        text-decoration: none;
+    }
+
+.main-menu a { 
+    color: #000; 
+}
 .main-menu a:hover { color: #81b3d2; }
 .main-menu a:active {
     color: #000;
@@ -231,10 +230,6 @@ body {
 .main-menu .active:active {
     color: #766357;
     opacity: .3;
-}
-
-.main-menu a:nth-child(2){
-    margin-right: 20%;
 }
 
 
@@ -351,6 +346,8 @@ body {
 /*  стилизация блока постера
 ------------------------------------------------------------------------------*/
 .main-poster {
+    background: url(../img/tmp/photo-01.jpg) no-repeat 50% 12%;
+    background-size: cover;
     position: relative;
 
     height: 510px;
@@ -359,19 +356,9 @@ body {
     overflow: hidden;
 }
 
-.main-poster > img {
-    position: absolute;
-    top: -48px;
-    left: 40%;
-
-    width: 1200px;
-    height: 733px;
-    margin-left: -480px;
-}
-
 /* слоган постера */
 .main-poster:before {
-    content: 'Welcome to the gorgeous Sedona, Because the Grand Canyon sucks!';
+    content: '';
 
     position: absolute;
     top: 75px;
@@ -393,6 +380,7 @@ body {
     content: '';
 
     position: absolute;
+    left: 0;
     bottom: 0;
     z-index: 999;
 
