@@ -161,6 +161,64 @@ body {
     }
 
 
+
+/*  стилизация кнопок
+------------------------------------------------------------------------------*/
+.btn {
+    display: inline-block;
+    vertical-align: top;
+    padding: 5px 17px;
+    
+    border: none;
+    outline: none;    
+    
+    font-family: 'PT Sans', Arial, sans-serif;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: bold;
+    
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    
+    cursor: pointer;
+    
+    color: #fff;
+}
+
+.btn:active {
+    color: rgba(255,255,255,.3);
+}
+
+.btn-blue {
+    background: #81b3d2;
+}
+.btn-blue:hover {
+    background: #669ec0;
+}
+.btn-blue:active {
+    background: #5496bd;
+}
+
+.btn-brown {
+    background: #766357;
+}
+.btn-brown:hover {
+    background: #604e43;
+}
+.btn-brown:active {
+    background: #503e33;
+}
+
+.btn-tab {
+    display: block;
+    padding: 30px;
+    
+    font-size: 21px;
+    line-height: 26px;
+}
+
+
 /*  стилизация шапки сайта
 ------------------------------------------------------------------------------*/
 .main-header {
@@ -529,6 +587,7 @@ body {
 
             font-weight: bold;
         }
+
             .advice-title::before {
                 content: '';
 
@@ -563,3 +622,31 @@ body {
 
 /*  стилизация блока choose-hotel
 ------------------------------------------------------------------------------*/
+
+.choose-hotel {
+    width: 568px;
+    margin: 0 auto;
+    padding-top: 55px;
+    
+    text-align: center;    
+}
+
+    .choose-hotel-title {
+        margin-bottom: 30px;
+
+        font-size: 30px;
+        line-height: 30px;
+
+        font-weight: bold;
+    }
+
+    .choose-hotel p {
+        margin: 0 50px;
+        margin-bottom: 45px;
+
+        line-height: 24px;
+    }
+
+    .choose-hotel-container {
+
+    }
