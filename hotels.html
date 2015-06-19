@@ -6,8 +6,8 @@
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 </head>
-<body class="hotels">
-    <div class="main-container">>
+<body class="inner-page hotels">
+    <div class="main-container">
         <header class="main-header">
             <a class="logo" href="index.html">лого</a>
             <nav class="main-menu clearfix">
@@ -21,9 +21,9 @@
         </header>
 
 
-        <div class="hotels-filters row hotels-row">
-            <form class="filters clearfix" action="/filter" method="get">
-                <div class="filter-options column column-double clearfix">
+        <div class="hotels-filters hotels-row">
+            <form class="filters row" action="/filter" method="get">
+                <div class="filter-options column column-double">
                     <div class="options">
                         <div class="options-title">
                             Инфраструктура:
@@ -67,7 +67,7 @@
                     </div>
                 </div>
 
-                <div class="filter-cost column column-single">
+                <div class="filter-cost column">
                     <div class="cost-title">
                         Стоимость в сутки (Р):
                     </div>
@@ -87,8 +87,8 @@
         </div>
 
 
-        <main class="hotels-catalog row hotels-row">
-            <header class="catalog-row catalog-header clearfix">
+        <main class="hotels-catalog hotels-row">
+            <header class="catalog-row catalog-header">
                 <span class="result-count">Найдено: 3</span>
 
                 Сортировка:
@@ -106,7 +106,7 @@
                 </div>
             </header>
 
-            <div class="catalog-row clearfix">
+            <div class="catalog-row">
                 <div class="hotel-info">
                     <img class="hotel-thumb" src="img/tmp/hotels/0001-s-01.jpg" width="135" height="90" alt="Amara Resort & Spa">
 
@@ -140,7 +140,7 @@
                 </div>
             </div>
 
-            <div class="catalog-row clearfix">
+            <div class="catalog-row">
                 <div class="hotel-info">
                     <img class="hotel-thumb" src="img/tmp/hotels/0002-s-01.jpg" width="135" height="90" alt="Desert Quail Inn">
 
@@ -172,7 +172,7 @@
                 </div>
             </div>
 
-            <div class="catalog-row clearfix">
+            <div class="catalog-row">
                 <div class="hotel-info">
                     <img class="hotel-thumb" src="img/tmp/hotels/0003-s-01.jpg" width="135" height="90" alt="Villas at Poco Diablo">
 
@@ -207,20 +207,24 @@
         </main>
 
 
-        <footer class="main-footer row clearfix">
-            <div class="footer-links column column-single">
-                <a href="#">#visitsedona</a>
-            </div>
+        <footer class="main-footer">
+            <ul class="footer-columns row">
+                <li class="footer-hashtag column">
+                    <a href="#">#visitsedona</a>
+                </li>
 
-            <div class="footer-socials column column-single">
-                <a class="btn-social icon-twitter" href="#">Twitter</a>
-                <a class="btn-social icon-facebook" href="#">Facebook</a>
-                <a class="btn-social icon-youtube" href="#">Youtube</a>
-            </div>
+                <li class="footer-socials column">
+                    <ul>
+                        <li><a class="btn btn-social btn-blue icon-twitter" href="#">Twitter</a></li>
+                        <li><a class="btn btn-social btn-blue icon-facebook" href="#">Facebook</a></li>
+                        <li><a class="btn btn-social btn-blue icon-youtube" href="#">Youtube</a></li>
+                    </ul>
+                </li>
 
-            <div class="footer-copyright column column-single">
-                website by <a class="logo-htmlacademy" href="https://htmlacademy.ru/">logo-htmlacademy</a>
-            </div>
+                <li class="footer-copyright column">
+                    website by <a class="logo-htmlacademy" href="https://htmlacademy.ru/">logo-htmlacademy</a>
+                </li>
+            </ul>
         </footer>
     </div>
 </body>

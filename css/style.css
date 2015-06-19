@@ -18,18 +18,28 @@
     clear: both;
 }
 
-.column {
-    float: left;
-    width: 33.33%;
+.row {
+    font-size: 0;
 }
 
-.column:last-child {
-    float: right;
+ul.row {
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
-.column-double {
-    width: 66.67%;
-}
+    .column {
+        display: inline-block;
+        vertical-align: top;
+
+        width: 33.33%;
+
+        font-size: 14px;
+    }
+
+    .column-double {
+        width: 66.67%;
+    }
 
 
 /*  Web fonts
@@ -150,7 +160,7 @@ body {
 }
 
     .main-container {
-        overflow: hidden;
+/*        overflow: hidden;*/
 
         max-width: 1200px;
         min-width: 768px;
@@ -168,21 +178,21 @@ body {
     display: inline-block;
     vertical-align: top;
     padding: 5px 17px;
-    
+
     border: none;
-    outline: none;    
-    
+    outline: none;
+
     font-family: 'PT Sans', Arial, sans-serif;
     font-size: 14px;
     line-height: 21px;
     font-weight: bold;
-    
+
     text-align: center;
     text-transform: uppercase;
     text-decoration: none;
-    
+
     cursor: pointer;
-    
+
     color: #fff;
 }
 
@@ -213,7 +223,7 @@ body {
 .btn-tab {
     display: block;
     padding: 30px;
-    
+
     font-size: 21px;
     line-height: 26px;
 }
@@ -302,116 +312,121 @@ body {
 
 /*  стилизация подвала сайта
 ------------------------------------------------------------------------------*/
-.main-footer {
-    padding-top: 36px;
-    padding-bottom: 30px;
+/*.main-footer {
 
-    text-align: center;
-
-    background: rgba(254,254,254,.9);
 }
-
-    .footer-links {
-        padding: 11px 0;
+*/
+    .main-footer .footer-columns {
+        padding: 30px 0;
+        background: rgba(254,254,254,.9);
     }
 
-        .footer-links a {
-            font-size: 21px;
-            line-height: 26px;
-
-            font-weight: bold;
-
-            text-decoration: none;
+        .main-footer .column {
+            text-align: center;
         }
 
-        .footer-links a {
-            color: #000;
+        .footer-hashtag {
+            padding: 17px 0;
         }
 
-        .footer-links a:hover {
-            color: #81b3d2;
-        }
+            .footer-hashtag a {
+                font-size: 21px;
+                line-height: 26px;
 
-        .footer-links a:active {
-            color: #000;
-            opacity: .3;
-        }
+                font-weight: bold;
 
-    .footer-socials {
-        margin: 0;
-        padding: 0;
-        list-style: none;
-        font-size: 0;
-    }
-
-        .footer-socials li {
-            display: inline-block;
-            vertical-align: top;
-        }
-
-            .btn-social {
-                display:  block;
-                width: 46px;
-                height: 48px;
-                margin-right: 6px;
-                margin-bottom: 6px;
-
-                font-size: 0;
                 text-decoration: none;
-
-                background: #81b3d2;
             }
 
-            .btn-social:hover {
-                background: #669ec0;
+            .footer-hashtag a {
+                color: #000;
             }
 
-            .btn-social:active {
-                background: #5496bd;
+            .footer-hashtag a:hover {
+                color: #81b3d2;
             }
 
-            .btn-social::before {
-                font-size: 20px;
-                line-height: 48px;
-                color: #fff;
-            }
-
-            .btn-social:active::before {
+            .footer-hashtag a:active {
+                color: #000;
                 opacity: .3;
             }
 
-    .footer-copyright {
-        font-size: 14px;
-        line-height: 48px;
+        .footer-socials ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            font-size: 0;
+        }
+
+            .footer-socials li {
+                display: inline-block;
+                vertical-align: top;
+                margin: 6px 3px;
+            }
+
+                .btn-social {
+                    display:  block;
+                    width: 46px;
+                    height: 48px;
+                    padding: 0;
+
+                    font-size: 0;
+                    line-height: 0;
+                }
+
+                    .btn-social::before {
+                        font-size: 20px;
+                        line-height: 48px;
+                    }
+
+        .footer-copyright {
+            padding: 6px 0;
+            font-size: 14px;
+            line-height: 48px;
+        }
+
+            .logo-htmlacademy {
+                display: inline-block;
+                vertical-align: top;
+
+                width: 113px;
+                height: 39px;
+                margin: 4px 8px;
+
+                font-size: 0;
+
+                text-decoration: none;
+
+                background: transparent url('../img/sprites-logo-htmlacademy.png') no-repeat;
+            }
+
+            .logo-htmlacademy {
+                background-position: 50% -198px;
+            }
+
+            .logo-htmlacademy:hover {
+                background-position: 50% -99px;
+            }
+
+            .logo-htmlacademy:active {
+                background-position: 50% 0;
+            }
+
+.main-footer-map {
+    position: relative;
+}
+
+    .main-footer-map .map {
+        height: 593px;
+        background: #cbdda9 url('../img/map.png') no-repeat 50% 100%;
     }
 
-        .logo-htmlacademy {
-            display: inline-block;
-            vertical-align: top;
-
-            width: 113px;
-            height: 39px;
-            margin-left: 8px;
-            margin-top: 8px;
-
-            font-size: 0;
-
-            text-decoration: none;
-
-            background: transparent url('../img/sprites-logo-htmlacademy.png') no-repeat;
-        }
-
-        .logo-htmlacademy {
-            background-position: 50% -198px;
-        }
-
-        .logo-htmlacademy:hover {
-            background-position: 50% -99px;
-        }
-
-        .logo-htmlacademy:active {
-            background-position: 50% 0;
-        }
+    .main-footer-map .footer-columns {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
 
 
 /*  стилизация блока постера
@@ -507,6 +522,8 @@ body {
     padding: 0;
 
     list-style: none;
+
+    background: #eee;
 }
 
 .features-open {
@@ -627,8 +644,8 @@ body {
     width: 568px;
     margin: 0 auto;
     padding-top: 55px;
-    
-    text-align: center;    
+
+    text-align: center;
 }
 
     .choose-hotel-title {
@@ -650,3 +667,8 @@ body {
     .choose-hotel-container {
 
     }
+
+
+/*  стилизация блока map
+------------------------------------------------------------------------------*/
+
