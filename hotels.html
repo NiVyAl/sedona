@@ -29,15 +29,15 @@
                         <ul class="options">
                             <li>
                                 <input class="control control-check" id="check-f-1" type="checkbox" name="facilities" value="val-1" checked>
-                                <label for="check-f-2">Бассейн</label>
+                                <label for="check-f-1">Бассейн</label>
                             </li>
                             <li>
                                 <input class="control control-check" id="check-f-2" type="checkbox" name="facilities" value="val-2">
                                 <label for="check-f-2">Парковка</label>
                             </li>
                             <li>
-                                <input class="control control-check" id="check-f-3" type="checkbox" name="facilities" value="val-3">
-                                <label for="check-f-2">Wi-Fi</label>
+                                <input class="control control-check" id="check-f-3" type="checkbox" name="facilities" value="val-3" disabled>
+                                <label for="check-f-3">Wi-Fi</label>
                             </li>
                         </ul>
                     </div>
@@ -62,15 +62,20 @@
 
                 <div class="filter-cost column">
                     <h2 class="filter-title">Стоимость в сутки (Р):</h2>
-                    <div class="cost-input">
-                        <input type="text" name="cost-from" value="от 0">
-                        <input type="text" name="cost-to" value="до 3000">
-                    </div>
-                    <div class="cost-range">
-                        <div class="range-scale"></div>
+
+                    <div class="cost-control" id="cost-control">
+                        <div class="cost-group">
+                            <input class="cost-input" type="text" name="cost-from" value="от 0">
+                            <input class="cost-input" type="text" name="cost-to" value="до 3000">
+                        </div>
+                        <div class="cost-range">
+                            <div class="range-slider range-slider-left"></div>
+                            <div class="range-slider range-slider-right"></div>
+                            <div class="range-scale"></div>
+                        </div>
                     </div>
 
-                    <input type="submit" value="Показать">
+                    <input class="btn-light" type="submit" value="Показать">
                 </div>
             </form>
         </div>
@@ -155,11 +160,11 @@
                         <div class="hotel-description">
                             <h2 class="hotel-title">Villas at Poco Diablo</h2>
 
-                            <p class="control"> Апартаменты
+                            <p class="hotel-action"> Апартаменты
                                 <a href="#" class="btn btn-blue">Подробнее</a>
                             </p>
 
-                            <p class="control"> ОТ 4000 Р.
+                            <p class="hotel-action"> ОТ 4000 Р.
                                 <a href="#" class="btn btn-brown">Забронировать</a>
                             </p>
                         </div>

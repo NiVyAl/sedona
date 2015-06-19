@@ -76,8 +76,8 @@ ul.row {
     font-style: normal;
 }
 
-[class^="icon-"]::before, [class*=" icon-"]::before {
-    font-family: "symbols-sedona";
+[class^='icon-']::before, [class*=' icon-']::before {
+    font-family: 'symbols-sedona';
     font-style: normal;
     font-weight: normal;
     speak: none;
@@ -227,6 +227,68 @@ body {
     font-size: 21px;
     line-height: 26px;
 }
+
+
+
+/*  стилизация элементов форм
+------------------------------------------------------------------------------*/
+input {
+    border: 2px solid #fff;
+    outline: none;
+
+    font-family: 'PT Sans', Arial, sans-serif;
+    font-size: 14px;
+    line-height: 21px;
+
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.control {
+    display: none;
+}
+
+.control-check + label {
+    position: relative;
+
+    padding-left: 42px;
+
+    font-size: 14px;
+    line-height: 21px;
+
+    cursor: pointer;
+}
+
+    .control-check + label::before {
+        content: '\2610';
+
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        font-size: 26px;
+
+        font-family: 'symbols-sedona';
+
+        color: #b5b5b5;
+    }
+
+    .control-check:checked + label::before {
+        content: '\2611';
+    }
+
+    .control + label:hover::before {
+        color: #fff;
+    }
+
+    .control-check:disabled + label,
+    .control-check:disabled + label::before,
+    .control-check:disabled + label:hover::before {
+        color: #6a6a6a;
+        cursor: default;
+    }
+
+
 
 
 /*  стилизация шапки сайта
@@ -454,7 +516,7 @@ body {
         width: 100%;
         height: 57px;
 
-        background: transparent url("../img/bg-poster-mask.png") no-repeat;
+        background: transparent url('../img/bg-poster-mask.png') no-repeat;
         background-position: 0 50%;
         background-size: 100% 57px;
     }
@@ -617,7 +679,7 @@ body {
                 height: 76px;
                 margin-left: -38px;
 
-                background: transparent url("../img/sprites-icons.png") no-repeat;
+                background: transparent url('../img/sprites-icons.png') no-repeat;
             }
 
             .advice-title-food::before {
@@ -669,6 +731,162 @@ body {
     }
 
 
-/*  стилизация блока map
+/*  контентные отступы на странице hotels
 ------------------------------------------------------------------------------*/
+.hotels-filters {
+    padding-left: 5.917%;
+    padding-right: 6.834%;
+}
+
+
+
+/*  стилизация блока hotels-filters
+------------------------------------------------------------------------------*/
+.hotels-filters {
+    padding-top: 18px;
+    padding-bottom: 6px;
+    color: #f2f2f2;
+    background: #4176a0 url('../img/bg-hotels-filters.jpg') no-repeat 0 50%;
+    background-size: cover;
+}
+
+    .filter-title {
+        margin: 12px 0;
+
+        font-size: 16px;
+        line-height: 21px;
+
+        text-align: left;
+    }
+
+    .filter-options {
+        font-size: 0;
+    }
+
+        .filter-options .sub-column {
+            display: inline-block;
+            vertical-align: top;
+
+            font-size: 14px;
+        }
+
+        .filter-options .sub-column:first-child {
+            margin-right: 115px;
+        }
+
+            .options {
+                margin: 0;
+                padding: 0;
+
+                list-style: none;
+            }
+
+                .options li {
+                    margin: 24px 0;
+                }
+
+    .filter-cost {
+        text-align: center;
+    }
+
+        .cost-control .cost-group {
+            position: relative;
+
+            border: 2px solid #fff;
+            border-radius: 3px;
+
+            font-size: 0;
+        }
+
+            .cost-control .cost-input {
+                display: inline-block;
+                vertical-align: top;
+                width: 40%;
+                padding: 5px 5%;
+
+                border: none;
+
+                background: transparent;
+            }
+
+            .cost-control .cost-group::before {
+                content: '';
+
+                position: absolute;
+                left: 50%;
+                top: 5px;
+
+                width: 2px;
+                height: 21px;
+                margin-left: -1px;
+
+                background: #fff;
+            }
+
+        .cost-control .cost-range {
+            position: relative;
+            margin: 20px 0;
+            height: 2px;
+
+            background: rgba(255,255,255,.3);
+        }
+
+            .cost-control .range-slider {
+                position: absolute;
+                z-index: 999;
+                top: -10px;
+
+                width: 4px;
+                height: 4px;
+
+                border: 9px solid #fff;
+                border-radius: 50%;
+
+                background: #ababab;
+
+                cursor: pointer;
+                box-shadow: 0 2px 0 0 rgba(0,0,0,.14);
+            }
+
+            .cost-control .range-slider:hover {
+                background: #1c4f80;
+            }
+
+            .cost-control .range-slider-left {
+                left: 0;
+            }
+
+            .cost-control .range-slider-right {
+                right: 20%;
+            }
+
+            .cost-control .range-scale {
+                position: absolute;
+                left: 0;
+                right: 20%;
+
+                height: 2px;
+                background: #fff;
+            }
+
+        .btn-light {
+            display: inline-block;
+            vertical-align: top;
+            margin: 12px 0;
+            padding: 5px 34px;
+
+            border: 2px solid #fff;
+            border-radius: 3px;
+
+            background: transparent;
+        }
+
+        .btn-light:hover {
+            background: rgba(0,0,0,.25);
+        }
+
+        .btn-light:active {
+            opacity: .5;
+        }
+
 
