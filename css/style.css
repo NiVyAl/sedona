@@ -221,11 +221,11 @@ body {
 
 .btn-tab {
     display: block;
-
     padding: 30px;
 
     font-size: 21px;
     line-height: 26px;
+    display: block;
 }
 
 
@@ -358,11 +358,11 @@ input {
             }
 
             .main-menu .active {
-                color: #766357;
+    color: #766357;
             }
 
             .main-menu .active:hover {
-                color: #604e43;
+    color: #604e43;
             }
 
             .main-menu .active:active {
@@ -693,7 +693,6 @@ input {
 
 /*  стилизация блока choose-hotel
 ------------------------------------------------------------------------------*/
-
 .choose-hotel {
     width: 568px;
     margin: 0 auto;
@@ -719,8 +718,159 @@ input {
     }
 
     .choose-hotel-container {
-
+        position: relative;
     }
+
+        .choose-hotel-form {
+            position: absolute;
+            z-index: 999;
+            left: 0;
+            right: 0;
+
+            background: #fff;
+            box-shadow: 0 7px 15px 0 rgba(0,0,0,.15);
+        }
+
+            .form {
+                width: 458px;
+                margin: 55px;
+            }
+
+                .form-row {
+                    margin: 0;
+                    padding: 0;
+                    list-style: none;
+
+                    margin-bottom: 30px;
+
+                    font-size: 0;
+                    line-height: 26px;
+
+                    font-weight: bold;
+
+                    text-align: left;
+                }
+
+                    .form-cell {
+                        position: relative;
+
+                        display: inline-block;
+                        vertical-align: middle;
+
+                        box-sizing: border-box;
+                        width: 115px;
+
+                        font-size: 14px;
+                    }
+
+                    .form-cell:last-child {
+                        width: 343px;
+                    }
+
+                    .form-row-4 .form-cell:nth-child(2n) {
+                        width: 114px;
+                    }
+
+                    .form-row-4 .form-cell:nth-child(3) {
+                        padding-left: 50px;
+                    }
+
+            .form input {
+                box-sizing: border-box;
+                width: 100%;
+
+                padding: 6px 12px;
+                padding-right: 38px;
+
+                border: none;
+                outline: none;
+
+                font-size: 14px;
+                line-height: 26px;
+
+                text-align: left;
+
+                background: #f2f2f2;
+            }
+
+            .form input:hover {
+                background: #ebebeb;
+            }
+
+            .form input:focus {
+                background: #fff;
+                box-shadow: inset 0 0 0 2px #e5e5e5;
+            }
+
+            .input-icon {
+                position: absolute;
+                top: 0;
+                right: 0;
+
+                width: 38px;
+                height: 38px;
+
+                color: #c2c2c2;
+
+                cursor: pointer;
+            }
+
+            .input-icon:hover {
+                color: #000;
+            }
+
+            .input-icon:active {
+                color: #81b3d2;
+            }
+
+                .input-icon::before {
+                    margin: 0;
+                    padding: 6px 8px;
+
+                    font-size: 21px;
+                    line-height: 26px;
+                }
+
+            .number {
+                font-size: 0;
+            }
+
+                .number input {
+                    width: 38px;
+                    padding-right: 12px;
+                    text-align: center;
+                }
+
+                .number .btn-icon {
+                    color: #a9a9a9;
+                    cursor: pointer;
+                }
+
+                .number .btn-icon:hover {
+                    color: #000;
+                }
+
+                .number .btn-icon:active {
+                    color: #81b3d2;
+                }
+
+                    .number .btn-icon::before {
+                        width: 38px;
+                        margin: 0;
+                        padding: 6px 0;
+
+                        font-size: 14px;
+                        line-height: 26px;
+
+                        background: #f2f2f2;
+                    }
+
+            .form .btn-tab {
+                width: 100%;
+                margin-top: 54px;
+                padding: 16px;
+            }
+
 
 
 /*  стилизация блока hotels-filters

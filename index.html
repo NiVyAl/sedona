@@ -110,19 +110,51 @@
                 <div class="choose-hotel-container">
                     <a class="btn btn-tab btn-brown" href="#" >Поиск гостиницы в Седоне</a>
 
-                    <form class="hidden" action="/search" method="post">
-                        <ul class="inputs">
-                            <li><label>Дата заезда: <input type="text" name="date-in" value="2014-04-24"></label></li>
-                            <li><label>Дата выезда: <input type="text" name="date-out" value="2014-07-04"></label></li>
-                            <li>
-                                <ul class="inputs-row">
-                                    <li><label>Взрослые: <input type="number" name="adult" value="2"></label></li>
-                                    <li><label>Дети: <input type="number" name="children" value="0"></label></li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <button class="btn btn-tab btn-blue" type="submit">Найти</button>
-                    </form>
+                    <div class="choose-hotel-form no-hidden">
+                        <form class="form" action="/search" method="post">
+                            <ul class="form-row">
+                                <li class="form-cell">
+                                    <label>Дата заезда:</label>
+                                </li>
+                                <li class="form-cell">
+                                    <input type="text" name="date-in" value="24 Апреля 2014">
+                                    <i class="input-icon icon-calendar"></i>
+                                </li>
+                            </ul>
+                            <ul class="form-row">
+                                <li class="form-cell">
+                                    <label>Дата выезда:</label>
+                                </li>
+                                <li class="form-cell">
+                                    <input type="text" name="date-out" value="4 июля 2014">
+                                    <i class="input-icon icon-calendar"></i>
+                                </li>
+                            </ul>
+                            <ul class="form-row form-row-4">
+                                <li class="form-cell">
+                                    <label>Взрослые:</label>
+                                </li>
+                                <li class="form-cell">
+                                    <div class="number">
+                                        <i class="btn-icon icon-minus"></i>
+                                        <input type="text" name="adult" value="2" readonly>
+                                        <i class="btn-icon icon-plus"></i>
+                                    </div>
+                                </li>
+                                <li class="form-cell">
+                                    <label>Дети:</label>
+                                </li>
+                                <li class="form-cell">
+                                    <div class="number">
+                                        <i class="btn-icon icon-minus"></i>
+                                        <input type="text" name="children" value="0" readonly>
+                                        <i class="btn-icon icon-plus"></i>
+                                    </div>
+                                </li>
+                            </ul>
+                            <button class="btn btn-tab btn-blue" type="submit">Найти</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </main>
