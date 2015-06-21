@@ -505,12 +505,12 @@ input {
     background: url(../img/bg-main-poster.jpg) no-repeat 50% 30%;
     background-size: cover;
 }
-    /* нижняя маска постера */
+    /* нижняя маска постера *//*
     .main-poster::after {
         content: '';
 
         position: absolute;
-        z-index: 999;
+        z-index: 99;
         left: 0;
         right: 0;
         bottom: 0;
@@ -521,6 +521,15 @@ input {
         background: transparent url('../img/bg-poster-mask.png') no-repeat;
         background-position: 0 50%;
         background-size: 100% 57px;
+    }*/
+
+    .main-poster-mask {
+        position: absolute;
+        z-index: 999;
+        left: 0;
+        bottom: 0;
+
+        width: 100%;
     }
 
     .slogan {
@@ -721,14 +730,34 @@ input {
         position: relative;
     }
 
+        .choose-hotel-container > .btn {
+            position: relative;
+            z-index: 999;
+        }
+
         .choose-hotel-form {
             position: absolute;
-            z-index: 999;
+            z-index: 998;
             left: 0;
             right: 0;
 
             background: #fff;
             box-shadow: 0 7px 15px 0 rgba(0,0,0,.15);
+
+            -webkit-transition: -webkit-transform .5s ease;
+                    transition:         transform .5s ease;
+
+            -webkit-transform-origin: top;
+                -ms-transform-origin: top;
+                    transform-origin: top;
+        }
+
+        .choose-hotel-form.hidden {
+            display: block;
+
+            -webkit-transform: scaleY(0) translateY(-100%);
+                -ms-transform: scaleY(0) translateY(-100%);
+                    transform: scaleY(0) translateY(-100%);
         }
 
             .form {

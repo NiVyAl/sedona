@@ -26,6 +26,9 @@
                 <span class="slogan slogan-welcome">Welcome to the gorgeous</span>
                 <span class="slogan slogan-sedona">Sedona</span>
                 <blockquote class="slogan slogan-cite">Because the Grand Canyon sucks</blockquote>
+                <svg class="main-poster-mask" width="1200" height="55" viewBox="0 0 1199 55" preserveAspectRatio="none">
+                    <polygon points="0,0 250,23 250,0 600,55 950,0 950,23 1200,0 1200,55 0,55" fill="#fff" />
+                </svg>
             </div>
 
             <section class="intro">
@@ -108,9 +111,9 @@
                 <p>Укажите предполагаемые даты поездки<br> и мы покажем вам лучшие предложения гостиниц в седоне</p>
 
                 <div class="choose-hotel-container">
-                    <a class="btn btn-tab btn-brown" href="#" >Поиск гостиницы в Седоне</a>
+                    <a class="btn btn-tab btn-brown" href="#" onclick="event.preventDefault();document.getElementById('choose-hotel-form').classList.toggle('hidden');">Поиск гостиницы в Седоне</a>
 
-                    <div class="choose-hotel-form no-hidden">
+                    <div class="choose-hotel-form hidden" id="choose-hotel-form">
                         <form class="form" action="/search" method="post">
                             <ul class="form-row">
                                 <li class="form-cell">
