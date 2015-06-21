@@ -1074,6 +1074,20 @@ input {
             line-height: 26px;
         }
 
+            .hotel-title a {
+                text-decoration: none;
+                color: #000;
+            }
+
+            .hotel-title a:hover {
+                color: #81b3d2;
+            }
+
+            .hotel-title a:active {
+                color: #000;
+                opacity: .3;
+            }
+
         .hotel-action {
             display: inline-block;
             vertical-align: top;
