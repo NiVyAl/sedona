@@ -106,21 +106,21 @@
                 </li>
             </ul>
 
-            <div class="choose-hotel">
+            <div class="choose-hotel" id="choose-hotel">
                 <div class="choose-hotel-title">Заинтересовались?</div>
                 <p>Укажите предполагаемые даты поездки<br> и мы покажем вам лучшие предложения гостиниц в седоне</p>
 
                 <div class="choose-hotel-container">
-                    <a class="btn btn-tab btn-brown" href="#" onclick="toggleHide(event)">Поиск гостиницы в Седоне</a>
+                    <a class="btn btn-tab btn-brown btn-toggle" href="#"">Поиск гостиницы в Седоне</a>
 
-                    <div class="choose-hotel-form hidden" id="choose-hotel-form">
+                    <div class="choose-hotel-popup hidden">
                         <form class="form" action="/search" method="post">
                             <ul class="form-row">
                                 <li class="form-cell">
                                     <label>Дата заезда:</label>
                                 </li>
                                 <li class="form-cell">
-                                    <input type="text" name="date-in" value="24 Апреля 2014">
+                                    <input class="input-date input-date-in" type="text" name="date-in" value="24 Апреля 2014" required>
                                     <i class="input-icon icon-calendar"></i>
                                 </li>
                             </ul>
@@ -129,7 +129,7 @@
                                     <label>Дата выезда:</label>
                                 </li>
                                 <li class="form-cell">
-                                    <input type="text" name="date-out" value="4 июля 2014">
+                                    <input class="input-date input-date-out" type="text" name="date-out" value="4 июля 2014" required>
                                     <i class="input-icon icon-calendar"></i>
                                 </li>
                             </ul>
@@ -138,9 +138,9 @@
                                     <label>Взрослые:</label>
                                 </li>
                                 <li class="form-cell">
-                                    <div class="number">
+                                    <div class="number number-adult">
                                         <i class="btn-icon icon-minus"></i>
-                                        <input type="text" name="adult" value="2" readonly>
+                                        <input class="input-number" type="text" name="adult" value="2" readonly>
                                         <i class="btn-icon icon-plus"></i>
                                     </div>
                                 </li>
@@ -148,9 +148,9 @@
                                     <label>Дети:</label>
                                 </li>
                                 <li class="form-cell">
-                                    <div class="number">
-                                        <i class="btn-icon icon-minus"></i>
-                                        <input type="text" name="children" value="0" readonly>
+                                    <div class="number number-children">
+                                        <i class="btn-icon btn-icon-disabled icon-minus"></i>
+                                        <input class="input-number" type="text" name="children" value="0" readonly>
                                         <i class="btn-icon icon-plus"></i>
                                     </div>
                                 </li>
@@ -194,10 +194,50 @@
     <script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=B4xz3OhG1NpNoXt_DV-0Khy-zlejFxE2&id=map"></script>
     -->
     <script>
-        function toggleHide(event) {
-            event.preventDefault();
-            document.getElementById('choose-hotel-form').classList.toggle('hidden');
-        }
+        (function(){
+            // https://learn.javascript.ru/event-delegation
+
+            chooseHotel = document.getElementById('choose-hotel');
+
+            chooseHotel.addEventListener('click', function(event) {
+                target = event.target;
+
+                if(target.classList.contains('btn-toggle')) {
+                    event.preventDefault();
+                    chooseHotel.querySelector('.choose-hotel-popup')
+                        .classList.toggle('hidden');
+                }
+
+                if(target.classList.contains('icon-minus')) {
+                    decNum(target.parentNode);
+                    return;
+                }
+
+                if(target.classList.contains('icon-plus')) {
+                    incNum(target.parentNode);
+                    return;
+                }
+            });
+
+            function incNum(numElem) {
+                var input = numElem.querySelector('.input-number');
+                if(+input.value == 0) {
+                    numElem.querySelector('.icon-minus')
+                        .classList.remove('btn-icon-disabled');
+                }
+                input.value = +input.value + 1;
+            }
+
+            function decNum(numElem) {
+                var input = numElem.querySelector('.input-number');
+                if(+input.value == 0) return;
+                if(+input.value == 1) {
+                    numElem.querySelector('.icon-minus')
+                        .classList.add('btn-icon-disabled');
+                }
+                input.value = +input.value - 1;
+            }
+        })();
     </script>
 </body>
 </html>
