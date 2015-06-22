@@ -140,7 +140,7 @@
                                 <li class="form-cell">
                                     <div class="counter counter-adult">
                                         <i class="btn-counter icon-minus"></i>
-                                        <input class="input-counter" type="text" name="counter-adult" value="2" readonly>
+                                        <input class="input-counter" type="text" name="counter-adult" value="2">
                                         <i class="btn-counter icon-plus"></i>
                                     </div>
                                 </li>
@@ -149,8 +149,8 @@
                                 </li>
                                 <li class="form-cell">
                                     <div class="counter counter-children">
-                                        <i class="btn-counter btn-counter-disabled icon-minus"></i>
-                                        <input class="input-counter" type="text" name="counter-children" value="0" readonly>
+                                        <i class="btn-counter icon-minus"></i>
+                                        <input class="input-counter" type="text" name="counter-children" value="0">
                                         <i class="btn-counter icon-plus"></i>
                                     </div>
                                 </li>
@@ -197,7 +197,17 @@
         (function(){
             // https://learn.javascript.ru/event-delegation
 
-            chooseHotel = document.getElementById('choose-hotel');
+            var chooseHotel = document.getElementById('choose-hotel');
+
+            var counters = chooseHotel.querySelectorAll('.counter');
+
+            for(var i = 0, len= counters.length; i < len; i++) {
+                val = +counters[i].querySelector('.input-counter').value;
+                if(val === 0) {
+                    counters[i].querySelector('.btn-counter.icon-minus')
+                        .classList.add('btn-counter-disabled');
+                }
+            }
 
             chooseHotel.addEventListener('click', function(event) {
                 target = event.target;
