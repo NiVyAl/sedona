@@ -386,6 +386,11 @@ input {
         background: #cbdda9 url('../img/map.png') no-repeat 50% 100%;
     }
 
+        .map iframe {
+            height: 593px;
+            width: 100%;
+        }
+
     .main-footer-map .footer-columns {
         position: absolute;
         bottom: 0;
