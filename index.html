@@ -111,7 +111,7 @@
                 <p>Укажите предполагаемые даты поездки<br> и мы покажем вам лучшие предложения гостиниц в седоне</p>
 
                 <div class="choose-hotel-container">
-                    <a class="btn btn-tab btn-brown" href="#" onclick="event.preventDefault();document.getElementById('choose-hotel-form').classList.toggle('hidden');">Поиск гостиницы в Седоне</a>
+                    <a class="btn btn-tab btn-brown" href="#" onclick="toggleHide(event)">Поиск гостиницы в Седоне</a>
 
                     <div class="choose-hotel-form hidden" id="choose-hotel-form">
                         <form class="form" action="/search" method="post">
@@ -187,5 +187,11 @@
             </ul>
         </footer>
     </div>
+    <script>
+        function toggleHide(event) {
+            event.preventDefault();
+            document.getElementById('choose-hotel-form').classList.toggle('hidden');
+        }
+    </script>
 </body>
 </html>
