@@ -377,6 +377,27 @@ input {
 
 /*  стилизация подвала сайта
 ------------------------------------------------------------------------------*/
+.main-footer-map {
+    position: relative;
+}
+
+    .main-footer-map .map {
+        height: 593px;
+        background: #cbdda9 url('../img/map.png') no-repeat 50% 100%;
+    }
+
+        .map iframe {
+            height: 593px;
+            width: 100%;
+        }
+
+    .main-footer-map .footer-columns {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
 /*.main-footer {
 
 }*/
@@ -909,19 +930,6 @@ input {
                 margin-top: 54px;
                 padding: 16px;
             }
-
-
-/*  стилизация блока map
-------------------------------------------------------------------------------*/
-.map {
-    height: 473px;
-    background: #cbdda9 url('../img/map.png') no-repeat center;
-}
-
-    .map iframe {
-        height: 473px;
-        width: 100%;
-    }
 
 
 /*  стилизация блока hotels-filters
