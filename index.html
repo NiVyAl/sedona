@@ -138,20 +138,20 @@
                                     <label>Взрослые:</label>
                                 </li>
                                 <li class="form-cell">
-                                    <div class="number number-adult">
-                                        <i class="btn-icon icon-minus"></i>
-                                        <input class="input-number" type="text" name="adult" value="2" readonly>
-                                        <i class="btn-icon icon-plus"></i>
+                                    <div class="counter counter-adult">
+                                        <i class="btn-counter icon-minus"></i>
+                                        <input class="input-counter" type="text" name="adult" value="2" readonly>
+                                        <i class="btn-counter icon-plus"></i>
                                     </div>
                                 </li>
                                 <li class="form-cell">
                                     <label>Дети:</label>
                                 </li>
                                 <li class="form-cell">
-                                    <div class="number number-children">
-                                        <i class="btn-icon btn-icon-disabled icon-minus"></i>
-                                        <input class="input-number" type="text" name="children" value="0" readonly>
-                                        <i class="btn-icon icon-plus"></i>
+                                    <div class="counter counter-children">
+                                        <i class="btn-counter btn-counter-disabled icon-minus"></i>
+                                        <input class="input-counter" type="text" name="children" value="0" readonly>
+                                        <i class="btn-counter icon-plus"></i>
                                     </div>
                                 </li>
                             </ul>
@@ -219,21 +219,21 @@
                 }
             });
 
-            function incNum(numElem) {
-                var input = numElem.querySelector('.input-number');
-                if(+input.value == 0) {
-                    numElem.querySelector('.icon-minus')
-                        .classList.remove('btn-icon-disabled');
+            function incNum(counter) {
+                var input = counter.querySelector('.input-counter');
+                if(+input.value === 0) {
+                    counter.querySelector('.btn-counter.icon-minus')
+                        .classList.remove('btn-counter-disabled');
                 }
                 input.value = +input.value + 1;
             }
 
-            function decNum(numElem) {
-                var input = numElem.querySelector('.input-number');
-                if(+input.value == 0) return;
-                if(+input.value == 1) {
-                    numElem.querySelector('.icon-minus')
-                        .classList.add('btn-icon-disabled');
+            function decNum(counter) {
+                var input = counter.querySelector('.input-counter');
+                if(+input.value === 0) return;
+                if(+input.value === 1) {
+                    counter.querySelector('.btn-counter.icon-minus')
+                        .classList.add('btn-counter-disabled');
                 }
                 input.value = +input.value - 1;
             }

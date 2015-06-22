@@ -887,11 +887,11 @@ input {
                     line-height: 26px;
                 }
 
-            .number {
+            .counter {
                 font-size: 0;
             }
 
-                .input-number {
+                .input-counter {
                     box-sizing: border-box;
                     width: 38px;
 
@@ -913,20 +913,20 @@ input {
                     user-select: none;          /* Likely future */
                 }
 
-                .number .btn-icon {
+                .btn-counter {
                     color: #a9a9a9;
                     cursor: pointer;
                 }
 
-                .number .btn-icon:hover {
+                .btn-counter:hover {
                     color: #000;
                 }
 
-                .number .btn-icon:active {
+                .btn-counter:active {
                     color: #81b3d2;
                 }
 
-                    .number .btn-icon::before {
+                    .btn-counter::before {
                         width: 38px;
 
                         margin: 0;
@@ -938,9 +938,9 @@ input {
                         background: #f2f2f2;
                     }
 
-                .number .btn-icon-disabled,
-                .number .btn-icon-disabled:hover,
-                .number .btn-icon-disabled:active {
+                .btn-counter-disabled,
+                .btn-counter-disabled:hover,
+                .btn-counter-disabled:active {
                     color: #ddd;
                     cursor: default;
                 }
