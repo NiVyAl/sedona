@@ -141,6 +141,7 @@ ul.row {
 }
 
 
+
 /**
  *  ============================================================================
  *       Оформление и декорирование
@@ -162,6 +163,7 @@ body {
     .main-container {
         max-width: 1200px;
         min-width: 768px;
+
         margin: 0 auto;
 
         background: #fff;
@@ -221,11 +223,11 @@ body {
 
 .btn-tab {
     display: block;
+
     padding: 30px;
 
     font-size: 21px;
     line-height: 26px;
-    display: block;
 }
 
 
@@ -267,7 +269,6 @@ input {
         top: 0;
 
         font-size: 26px;
-
         font-family: 'symbols-sedona';
 
         color: #b5b5b5;
@@ -301,9 +302,9 @@ input {
         z-index:99;
         left: 50%;
 
-        display: block;
         width: 138px;
         height: 70px;
+
         margin-left: -69px;
 
         font-size: 0;
@@ -316,7 +317,9 @@ input {
     .main-menu ul {
         margin: 0;
         padding: 0;
+
         list-style: none;
+
         font-size: 0;
     }
 
@@ -333,6 +336,7 @@ input {
 
             .main-menu a {
                 display: block;
+
                 padding: 15px 0;
 
                 font-size: 14px;
@@ -358,11 +362,11 @@ input {
             }
 
             .main-menu .active {
-    color: #766357;
+                color: #766357;
             }
 
             .main-menu .active:hover {
-    color: #604e43;
+                color: #604e43;
             }
 
             .main-menu .active:active {
@@ -431,6 +435,7 @@ input {
         .footer-socials ul {
             margin: 0;
             padding: 0;
+
             list-style: none;
 
             font-size: 0;
@@ -448,6 +453,7 @@ input {
 
                     width: 46px;
                     height: 48px;
+
                     padding: 0;
 
                     font-size: 0;
@@ -461,20 +467,25 @@ input {
 
         .footer-copyright {
             padding: 6px 0;
-
-            font-size: 14px;
-            line-height: 48px;
+            font-size: 0;
         }
 
-            .logo-htmlacademy {
+            .footer-copyright a,
+            .footer-copyright span {
                 display: inline-block;
-                vertical-align: top;
+                vertical-align: middle;
+            }
 
+            .footer-copyright span {
+                margin-left: 10px;
+                font-size: 14px;
+            }
+
+            .logo-htmlacademy {
                 width: 113px;
                 height: 39px;
-                margin: 4px 8px;
 
-                font-size: 0;
+                margin: 4px 8px;
 
                 text-decoration: none;
 
@@ -500,6 +511,7 @@ input {
     position: relative;
 
     height: 510px;
+
     margin-bottom: 54px;
 
     background: url(../img/bg-main-poster.jpg) no-repeat 50% 30%;
@@ -515,7 +527,6 @@ input {
         right: 0;
         bottom: 0;
 
-        width: 100%;
         height: 57px;
 
         background: transparent url('../img/bg-poster-mask.png') no-repeat;
@@ -539,6 +550,7 @@ input {
 
         width: 458px;
         height: 90px;
+
         margin-left: -229px;
 
         font-size: 0;
@@ -567,7 +579,7 @@ input {
 /*  стилизация блока intro
 ------------------------------------------------------------------------------*/
 .intro {
-    margin-bottom: 55px;
+    margin-bottom: 51px;
 
     line-height: 26px;
 
@@ -576,8 +588,10 @@ input {
 
     .intro-title {
         width: 450px;
+
         margin: 0 auto;
-        margin-bottom: 30px;
+        margin-bottom: 28px;
+        padding-top: 5px;
 
         font-size: 21px;
 
@@ -589,6 +603,7 @@ input {
 ------------------------------------------------------------------------------*/
 .features {
     height: 256px;
+
     margin: 0;
     padding: 0;
 
@@ -603,8 +618,12 @@ input {
 }
 
     .feature-description {
-        margin-top: 5%;
+        margin-top: 3.7%;
         text-align: center;
+    }
+
+    .features-open .feature-description {
+        margin-top: 4.25%;
     }
 
         .feature-title {
@@ -618,7 +637,8 @@ input {
 
         .feature-number {
             display: block;
-            margin-bottom: 23px;
+
+            margin-bottom: 21px;
 
             font-size: 14px;
             line-height: 21px;
@@ -645,6 +665,7 @@ input {
 ------------------------------------------------------------------------------*/
 .advices {
     height: 330px;
+
     margin: 0;
     padding: 0;
 
@@ -659,8 +680,8 @@ input {
         .advice-title {
             position: relative;
 
-            margin-bottom: 25px;
-            padding-top: 105px;
+            margin-bottom: 22px;
+            padding-top: 103px;
 
             font-size: 21px;
             line-height: 26px;
@@ -675,9 +696,9 @@ input {
                 left: 50%;
                 top: 0;
 
-                display: block;
                 width: 76px;
                 height: 76px;
+
                 margin-left: -38px;
 
                 background: transparent url('../img/sprites-icons.png') no-repeat;
@@ -696,7 +717,7 @@ input {
             }
 
         .advice-description p {
-            margin: 0 17%;
+            margin: 0 14%;
         }
 
 
@@ -704,14 +725,15 @@ input {
 ------------------------------------------------------------------------------*/
 .choose-hotel {
     width: 568px;
+
     margin: 0 auto;
-    padding-top: 55px;
+    padding-top: 53px;
 
     text-align: center;
 }
 
     .choose-hotel-title {
-        margin-bottom: 30px;
+        margin-bottom: 29px;
 
         font-size: 30px;
         line-height: 30px;
@@ -767,10 +789,10 @@ input {
 
                 .form-row {
                     margin: 0;
-                    padding: 0;
-                    list-style: none;
-
                     margin-bottom: 30px;
+                    padding: 0;
+
+                    list-style: none;
 
                     font-size: 0;
                     line-height: 26px;
@@ -866,7 +888,9 @@ input {
 
                 .number input {
                     width: 38px;
+
                     padding-right: 12px;
+
                     text-align: center;
                 }
 
@@ -885,6 +909,7 @@ input {
 
                     .number .btn-icon::before {
                         width: 38px;
+
                         margin: 0;
                         padding: 6px 0;
 
@@ -896,6 +921,7 @@ input {
 
             .form .btn-tab {
                 width: 100%;
+
                 margin-top: 54px;
                 padding: 16px;
             }
@@ -923,11 +949,10 @@ input {
 }
 
 .hotels-filters {
-    padding-top: 18px;
-    padding-bottom: 6px;
+    padding-top: 14px;
+    padding-bottom: 11px;
 
     color: #f2f2f2;
-
     background: #4176a0 url('../img/bg-hotels-filters.jpg') no-repeat 0 50%;
     background-size: cover;
 }
@@ -950,18 +975,20 @@ input {
             vertical-align: top;
 
             max-width: 150px;
+
             margin-right: 30px;
 
             font-size: 14px;
         }
 
         .filter-options .sub-column:first-child {
-            margin-right: 115px;
+            margin-right: 119px;
         }
 
             .options {
                 margin: 0;
                 padding: 0;
+
                 list-style: none;
             }
 
@@ -987,6 +1014,7 @@ input {
                 vertical-align: top;
 
                 width: 40%;
+
                 padding: 5px 5%;
 
                 border: none;
@@ -1003,6 +1031,7 @@ input {
 
                 width: 2px;
                 height: 21px;
+
                 margin-left: -1px;
 
                 background: #fff;
@@ -1025,7 +1054,7 @@ input {
                 width: 4px;
                 height: 4px;
 
-                border: 9px solid #fff;
+                border: 8px solid #fff;
                 border-radius: 50%;
 
                 background: #ababab;
@@ -1043,13 +1072,13 @@ input {
             }
 
             .cost-control .range-slider-right {
-                right: 20%;
+                right: 14%;
             }
 
             .cost-control .range-scale {
                 position: absolute;
                 left: 0;
-                right: 20%;
+                right: 14%;
 
                 height: 2px;
 
@@ -1144,22 +1173,22 @@ input {
 
     .sort-type {
         margin: 0;
-        padding: 0;
-        list-style: none;
-
         margin-right: 100px;
+        padding: 0;
         padding-top: 7px;
+
+        list-style: none;
     }
 
         .sort-type li {
             display: inline-block;
             vertical-align: baseline;
 
-            margin-right: 33px;
+            margin-right: 29px;
         }
 
         .sort-type li:first-child {
-            margin-right: 40px;
+            margin-right: 37px;
         }
 
         .sort-type a {
@@ -1173,18 +1202,21 @@ input {
 
         .sort-type a:hover {
             border-color: #81b3d2;
+
             color: #81b3d2;
             opacity: 1;
         }
 
         .sort-type a:active {
             border: none;
+
             color: #000;
             opacity: 1;
         }
 
         .sort-type a.active {
             border: none;
+
             color: #81b3d2;
             opacity: 1;
         }
@@ -1247,6 +1279,7 @@ input {
 
         .hotel-title {
             margin: 0;
+            margin-top: -6px;
             margin-bottom: 6px;
 
             font-size: 21px;
@@ -1272,6 +1305,7 @@ input {
             vertical-align: top;
 
             max-width: 160px;
+
             margin: 0;
             margin-right: 6px;
 
@@ -1280,7 +1314,8 @@ input {
 
             .hotel-action .btn {
                 display: block;
-                margin-top: 6px;
+                margin-top: 15px;
+                padding: 3px 17px;
             }
 
     .hotel-stars,
@@ -1289,7 +1324,7 @@ input {
     }
 
     .hotel-rating {
-        padding: 3px 14px;
+        padding: 3px 11px;
 
         color: #666;
         background: #f2f2f2;
@@ -1297,13 +1332,20 @@ input {
 
     .hotel-stars {
         margin: 0;
+        margin-right: -3px;
+        margin-top: -4px;
         padding: 0;
+
         list-style: none;
     }
 
         .hotel-stars .icon-star {
             display: inline-block;
             vertical-align: top;
+
+            margin-left: 2px;
+
+            font-size: 18px;
 
             color: #81b3d2;
         }
