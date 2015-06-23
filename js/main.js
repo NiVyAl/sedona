@@ -36,6 +36,11 @@
                 incNum(target.parentNode);
                 return;
             }
+
+            if(target.classList.contains('icon-calendar')) {
+                setDate(target.parentNode);
+                return;
+            }
         });
 
         window.addEventListener('keydown', function(event) {
@@ -49,8 +54,6 @@
                 }
                 return;
             }
-
-
         });
 
         chooseHotel.querySelector('form').addEventListener('submit', function(event) {
@@ -95,6 +98,12 @@
                 .classList.add('btn-counter-disabled');
         }
         input.value = +input.value - 1;
+    }
+
+    function setDate(elem) {
+        // ToDo: добавить модуль установки даты
+        alert('Заглушка для модуля установки даты');
+        return true;
     }
 
     function isValid(input) {
