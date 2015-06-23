@@ -1109,7 +1109,7 @@ input {
             font-size: 0;
         }
 
-            .cost-control .cost-input {
+            .cost-group label {
                 display: inline-block;
                 vertical-align: top;
 
@@ -1117,10 +1117,22 @@ input {
 
                 padding: 5px 5%;
 
-                border: none;
+                font-size: 14px;
 
-                background: transparent;
+                text-align: right;
             }
+
+                .cost-control .cost-input {
+                    max-width: 50%;
+
+                    padding: 0px;
+
+                    border: none;
+
+                    text-align: left;
+
+                    background: transparent;
+                }
 
             .cost-control .cost-group::before {
                 content: '';
