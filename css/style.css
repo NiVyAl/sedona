@@ -1079,14 +1079,40 @@ input {
 
             height: 2px;
             margin: 20px 0;
-
-            background: rgba(255,255,255,.3);
+            margin-right: 20px;
         }
 
+            /* элементы шкалы */
+            .cost-control .cost-range::before,
+            .cost-control .cost-range::after {
+                content: "";
+
+                position: absolute;
+
+                height: 2px;
+            }
+
+            /* вся шкала */
+            .cost-control .cost-range::before {
+                left: 0;
+                right: -20px;
+
+                background: rgba(255,255,255,.3);
+            }
+
+            /* выделенный участок шкалы */
+            .cost-control .cost-range::after {
+                left: 0%;
+                right: 14%;
+
+                background: #fff;
+            }
+
+            /* ползунки */
             .cost-control .range-slider {
                 position: absolute;
                 z-index: 999;
-                top: -10px;
+                top: -9px;
 
                 width: 4px;
                 height: 4px;
@@ -1105,21 +1131,11 @@ input {
             }
 
             .cost-control .range-slider-left {
-                left: 0;
+                left: 0%;
             }
 
             .cost-control .range-slider-right {
-                right: 14%;
-            }
-
-            .cost-control .range-scale {
-                position: absolute;
-                left: 0;
-                right: 14%;
-
-                height: 2px;
-
-                background: #fff;
+                left: 86%;
             }
 
         .btn-light {

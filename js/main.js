@@ -1,5 +1,6 @@
 (function(){
     var chooseHotel = document.getElementById('choose-hotel');
+    var hotelsFilters = document.getElementById('hotels-filters');
 
     if(chooseHotel) {
         var counters = chooseHotel.querySelectorAll('.counter');
@@ -80,6 +81,9 @@
         });
     }
 
+    if(hotelsFilters) {
+
+    }
 
     function incNum(counter) {
         var input = counter.querySelector('.input-counter');
