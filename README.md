@@ -12,7 +12,9 @@
 
 * Тест [сетки](http://codepen.io/anon/pen/KpyWXK)
 * Тест [шапки](http://codepen.io/anon/pen/RPjpaQ)
-* Тест [маски для постера](http://codepen.io/anon/pen/eNevNm)
+* Тест маски для постера:
+  * [с помощью градиентов](http://codepen.io/anon/pen/eNevNm)
+  * [с помощью svg](http://codepen.io/anon/pen/NqwpyZ)
 * Тест нумерации блоков через псевдоэлемент:
   * [с помощью атрибута](https://jsfiddle.net/59gd5qjd/)
   * [с помощью счетчика](https://jsfiddle.net/59gd5qjd/1/)
