@@ -246,6 +246,11 @@ input {
     text-transform: uppercase;
 }
 
+.input-error {
+    /* установка высшего приоритета для стилей состояния ошибки */
+    outline: 2px solid #f00 !important;
+}
+
 .control {
     display: none;
 }
