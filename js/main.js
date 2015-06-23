@@ -17,8 +17,14 @@
 
             if(target.classList.contains('btn-toggle')) {
                 event.preventDefault();
-                chooseHotel.querySelector('.choose-hotel-popup')
-                    .classList.toggle('hidden');
+
+                popup = chooseHotel.querySelector('.choose-hotel-popup');
+                popup.classList.toggle('hidden');
+
+                if(!popup.classList.contains('hidden')) {
+                    popup.querySelector('input').focus();
+                }
+                return;
             }
 
             if(target.classList.contains('icon-minus')) {
@@ -30,6 +36,21 @@
                 incNum(target.parentNode);
                 return;
             }
+        });
+
+        window.addEventListener('keydown', function(event) {
+            target = event.target;
+
+            if(event.keyCode === 27) {
+                popup = chooseHotel.querySelector('.choose-hotel-popup');
+
+                if(!popup.classList.contains('hidden')) {
+                    popup.classList.add('hidden');
+                }
+                return;
+            }
+
+
         });
 
         chooseHotel.querySelector('form').addEventListener('submit', function(event) {
