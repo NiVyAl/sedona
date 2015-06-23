@@ -415,9 +415,7 @@ input {
 
                 text-align: center;
                 text-decoration: none;
-            }
 
-            .main-menu a {
                 color: #000;
             }
 
@@ -737,8 +735,6 @@ input {
         .feature-poster img {
             position: absolute;
             top: 50%;
-
-            display: block;
 
             max-width: 100%;
             height: auto;

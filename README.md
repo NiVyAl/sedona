@@ -10,13 +10,12 @@
 
 ## Тесты реализации некоторых элементов
 
-Тест [скелета шапки](https://jsfiddle.net/6ybucgyv/)
-Тест [маски для постера](https://jsfiddle.net/wkxLu1mh/2/)
-
-Тест нумерации блоков через псевдоэлемент:
-
-- [с помощью атрибута](https://jsfiddle.net/59gd5qjd/)
-- [с помощью счетчика](https://jsfiddle.net/59gd5qjd/1/)
+* Тест [сетки](http://codepen.io/anon/pen/KpyWXK)
+* Тест [шапки](http://codepen.io/anon/pen/RPjpaQ)
+* Тест [маски для постера](http://codepen.io/anon/pen/eNevNm)
+* Тест нумерации блоков через псевдоэлемент:
+..* [с помощью атрибута](https://jsfiddle.net/59gd5qjd/)
+..* [с помощью счетчика](https://jsfiddle.net/59gd5qjd/1/)
 
 
 ## Фрагменты Т.З.:
