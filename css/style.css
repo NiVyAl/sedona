@@ -452,7 +452,7 @@ input {
 
     .main-footer-map .map {
         height: 593px;
-        background: #cbdda9 url('../img/map.png') no-repeat 50% 100%;
+        background: #e2e7d0 url('../img/map.png') no-repeat 50% 100%;
     }
 
         .map iframe {
@@ -588,7 +588,7 @@ input {
 
     margin-bottom: 54px;
 
-    background: url(../img/bg-main-poster.jpg) no-repeat 50% 30%;
+    background: #3d4c57 url(../img/bg-main-poster.jpg) no-repeat 50% 30%;
     background-size: cover;
 }
     /* нижняя маска постера *//*
@@ -725,13 +725,27 @@ input {
         }
 
     .feature-poster {
+        position: relative;
+
         height: 256px;
+
         overflow: hidden;
+
+        background: rgba(0,0,0,.1);
     }
 
         .feature-poster img {
+            position: absolute;
+            top: 50%;
+
             display: block;
-            width: 100%;
+
+            max-width: 100%;
+            height: auto;
+
+            -webkit-transform: translateY(-50%);
+                -ms-transform: translateY(-50%);
+                    transform: translateY(-50%);
         }
 
 
@@ -1053,7 +1067,7 @@ input {
     padding-bottom: 11px;
 
     color: #f2f2f2;
-    background: #4176a0 url('../img/bg-hotels-filters.jpg') no-repeat 0 50%;
+    background: #46525c url('../img/bg-hotels-filters.jpg') no-repeat 0 50%;
     background-size: cover;
 }
 
