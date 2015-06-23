@@ -141,6 +141,70 @@ ul.row {
 }
 
 
+/*  правила для анимаций
+------------------------------------------------------------------------------*/
+@-webkit-keyframes show {
+    0% {
+            -webkit-transform: scaleY(0) translateY(-100%);
+    }
+    50% {
+            -webkit-transform: scaleY(1) translateY(20%);
+    }
+    70% {
+            -webkit-transform: scaleY(.8) translateY(0%);
+    }
+    90% {
+            -webkit-transform: scaleY(1) translateY(10%);
+    }
+    100% {
+            -webkit-transform: scaleY(1) translateY(0);
+    }
+}
+
+@-webkit-keyframes hide {
+    0% {
+        -webkit-transform: scaleY(1) translateY(0);
+    }
+    100% {
+        -webkit-transform: scaleY(0) translateY(-100%);
+    }
+}
+
+@keyframes show {
+    0% {
+            -ms-transform: scaleY(0) translateY(-100%);
+                transform: scaleY(0) translateY(-100%);
+    }
+    50% {
+            -ms-transform: scaleY(1) translateY(20%);
+                transform: scaleY(1) translateY(20%);
+    }
+    70% {
+            -ms-transform: scaleY(.8) translateY(0%);
+                transform: scaleY(.8) translateY(0%);
+    }
+    90% {
+            -ms-transform: scaleY(1) translateY(10%);
+                transform: scaleY(1) translateY(10%);
+    }
+    100% {
+            -ms-transform: scaleY(1) translateY(0);
+                transform: scaleY(1) translateY(0);
+    }
+}
+
+@keyframes hide {
+    0% {
+            -ms-transform: scaleY(1) translateY(0);
+                transform: scaleY(1) translateY(0);
+    }
+    100% {
+            -ms-transform: scaleY(0) translateY(-100%);
+                transform: scaleY(0) translateY(-100%);
+    }
+}
+
+
 
 /**
  *  ============================================================================
@@ -776,20 +840,19 @@ input {
             background: #fff;
             box-shadow: 0 7px 15px 0 rgba(0,0,0,.15);
 
-            -webkit-transition: -webkit-transform .5s ease;
-                    transition:         transform .5s ease;
-
             -webkit-transform-origin: top;
                 -ms-transform-origin: top;
                     transform-origin: top;
         }
 
-        .choose-hotel-popup.hidden {
-            display: block;
+        .popup-show {
+            -webkit-animation: show .75s forwards;
+                    animation: show .75s forwards;
+        }
 
-            -webkit-transform: scaleY(0) translateY(-100%);
-                -ms-transform: scaleY(0) translateY(-100%);
-                    transform: scaleY(0) translateY(-100%);
+        .popup-hide {
+            -webkit-animation: hide .5s forwards;
+                    animation: hide .5s forwards;
         }
 
             .form {

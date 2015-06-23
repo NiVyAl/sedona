@@ -20,7 +20,8 @@
                 event.preventDefault();
 
                 popup = chooseHotel.querySelector('.choose-hotel-popup');
-                popup.classList.toggle('hidden');
+                popup.classList.toggle('popup-show');
+                popup.classList.toggle('popup-hide');
 
                 if(!popup.classList.contains('hidden')) {
                     popup.querySelector('input').focus();
