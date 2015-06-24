@@ -64,21 +64,22 @@
             requireds = chooseHotel.querySelectorAll('[required]');
 
             for(var i = 0, len= requireds.length; i < len; i++) {
-                if(!isValid(requireds[i])) {
-                    event.preventDefault();
+                if(isValid(requireds[i])) continue;
 
-                    requireds[i].classList.add('input-error');
-                    requireds[i].focus();
-                    requireds[i].oninput = function(e) {
-                        this.oninput = null;
-                        this.classList.remove('input-error');
-                    }
+                event.preventDefault();
 
-                    alert('поле заполнено неверно');
-                    return;
-                }
+                requireds[i].focus();
+                requireds[i].classList.add('input-error');
+                requireds[i].oninput = clearErrorState;
+
+                alert('поле заполнено неверно');
+                return;
             }
 
+            function clearErrorState() {
+                this.classList.remove('input-error');
+                this.oninput = null;
+            }
         });
     }
 
