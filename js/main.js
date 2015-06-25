@@ -83,66 +83,81 @@
 
   // обработка событий для блока hotels-filters
   if(hotelsFilters) {
-    var range = hotelsFilters.querySelector('.cost-range');
-    var sliderMin = range.querySelector('.range-slider-min');
-    var sliderMax = range.querySelector('.range-slider-max');
+
+    var w = 20, // slider width === 20px
+      range = hotelsFilters.querySelector('.range'),
+      rangeRect = {
+        'left': range.getBoundingClientRect().left,
+        'right': range.getBoundingClientRect().right,
+        'width': range.getBoundingClientRect().width - 2*w
+      },
+      scale = range.querySelector('.scale'),
+      sliderMin = scale.querySelector('.scale-slider-min'),
+      sliderMax = scale.querySelector('.scale-slider-max');
 
     // реализация перемещения ползунков
-    range.addEventListener('mousedown', function(event) {
-      var target = event.target;
+    scale.addEventListener('mousedown', function(event) {
+      var sliderMinRange = {
+            'curr': sliderMin.getBoundingClientRect().left,
+            'min': rangeRect.left,
+            'max': sliderMax.getBoundingClientRect().right - 2*w,
+          },
+          sliderMaxRange = {
+            'curr': sliderMax.getBoundingClientRect().right,
+            'min': sliderMin.getBoundingClientRect().left + 2*w,
+            'max': rangeRect.right,
+          };
 
-      var point1d = {};
-      var sliderCoords = {};
+      // console.log(event.clientX);
+      // console.log(sliderMinRange.curr, sliderMinRange.min, sliderMinRange.max);
+      // console.log(sliderMaxRange.curr, sliderMaxRange.min, sliderMaxRange.max);
 
-      if(target === sliderMin || target === sliderMax) {
-        document.onmousemove = moveSlider(target);
-        document.onmouseup = stopSlider(target);
+      if(event.target !== sliderMin && event.target !== sliderMax ) return;
 
-        point1d.x = event.clientX;
-        point1d.dx = event.clientX - point1d.x;
+      if (event.target === sliderMin) {
+        var dx = event.clientX - sliderMinRange.curr;
 
-        sliderCoords.left = parseFloat(window.getComputedStyle(target).left);
+        document.onmousemove = function(event) {
+          if(event.clientX - dx < sliderMinRange.min) {
+            scale.style.left = '0';
+            // console.log('min: 0%');
+            return;
+          }
+          if(event.clientX - dx > sliderMinRange.max) {
+            scale.style.left = sliderMinRange.max - sliderMinRange.min + 'px';
+            // console.log('min:', 100*(sliderMinRange.max - sliderMinRange.min)/rangeRect.width + '%');
+            return;
+          }
 
-        if(target === sliderMin) {
-          sliderCoords.minLeft = 0;
-          sliderCoords.maxLeft = parseFloat(window.getComputedStyle(sliderMax).left);
-        } else {
-          sliderCoords.minLeft = parseFloat(window.getComputedStyle(sliderMin).left)
-          sliderCoords.maxLeft = target.parentElement.getBoundingClientRect().width;
-        }
-
-        console.log(event.type, point1d, sliderCoords);
-      }
-
-      function moveSlider(slider) {
-        return function(event) {
-          point1d.dx = event.clientX - point1d.x;
-          point1d.x = event.clientX;
-
-          if(sliderCoords.left === sliderCoords.maxLeft &&
-            point1d.x > slider.getBoundingClientRect().left) return;
-
-          if(sliderCoords.left === sliderCoords.minLeft &&
-            point1d.x < slider.getBoundingClientRect().left) return;
-
-          sliderCoords.left += point1d.dx;
-          if(sliderCoords.left > sliderCoords.maxLeft) sliderCoords.left = sliderCoords.maxLeft;
-          if(sliderCoords.left < sliderCoords.minLeft) sliderCoords.left = sliderCoords.minLeft;
-
-          slider.style.left = sliderCoords.left + 'px';
-
-          console.log(event.type, point1d, sliderCoords);
+          scale.style.left = event.clientX - dx - sliderMinRange.min + 'px';
+          // console.log('min:', 100*(event.clientX - dx - sliderMinRange.min)/rangeRect.width + '%');
         }
       }
 
-      function stopSlider(slider) {
-        return function(event) {
-          console.log(event.type, event.clientX);
-          document.onmousemove = null;
-          document.onmouseup = null;
-          point1d = null;
-          sliderCoords = null;
+      if (event.target === sliderMax) {
+        var dx = event.clientX - sliderMaxRange.curr;
+
+        document.onmousemove = function(event) {
+          if(event.clientX - dx > sliderMaxRange.max) {
+            scale.style.right = '0';
+            // console.log('max: 100%');
+            return;
+          }
+          if(event.clientX - dx < sliderMaxRange.min) {
+            scale.style.right = sliderMaxRange.max - sliderMaxRange.min + 'px';
+            // console.log('max:', 100 - 100*(sliderMaxRange.max - sliderMaxRange.min)/rangeRect.width + '%');
+            return;
+          }
+
+          scale.style.right = sliderMaxRange.max - event.clientX + dx + 'px';
+          // console.log('max:', 100 - 100*(sliderMaxRange.max - event.clientX + dx)/rangeRect.width + '%');
         }
+      }
+
+
+      document.onmouseup = function(e) {
+        document.onmousemove = null;
+        document.onmouseup = null;
       }
     });
   }
