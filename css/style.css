@@ -1120,7 +1120,7 @@ body {
 
       height: 2px;
       margin: 20px 0;
-      margin-right: 20px;
+      margin-left: 40px;
     }
       /* элементы шкалы */
       .cost-range::before,
@@ -1133,8 +1133,8 @@ body {
       }
       /* вся шкала */
       .cost-range::before {
-        left: 0;
-        right: -20px;
+        left: -40px;
+        right: 0;
 
         background: rgba(255,255,255,.3);
       }
@@ -1142,6 +1142,9 @@ body {
       .cost-range::after {
         left: 0%;
         right: 14%;
+
+        margin-left: -20px;
+        margin-right: 20px;
 
         background: #fff;
       }
@@ -1151,8 +1154,7 @@ body {
         z-index: 999;
         top: -9px;
 
-        width: 4px;
-        height: 4px;
+        padding: 2px;
 
         border: 8px solid #fff;
         border-radius: 50%;
@@ -1167,12 +1169,14 @@ body {
         background: #1c4f80;
       }
 
-      .range-slider-left {
+      .range-slider-min {
         left: 0%;
+        margin-left: -40px;
       }
 
-      .range-slider-right {
+      .range-slider-max {
         left: 86%;
+        margin-left: -20px;
       }
 
 

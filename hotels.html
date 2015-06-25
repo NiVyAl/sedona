@@ -20,7 +20,7 @@
       </nav>
     </header>
 
-    <div class="hotels-filters">
+    <div class="hotels-filters" id="hotels-filters">
       <form class="filters row" action="/filter" method="post">
         <div class="filter-options column column-double column-left">
           <section class="sub-column">
@@ -64,12 +64,12 @@
           <h2 class="filter-title">Стоимость в сутки (Р):</h2>
           <div class="cost-control" id="cost-control">
             <div class="cost-group">
-              <label>от <input class="cost-input" type="text" name="cost-from" value="0" size="6"></label>
-              <label>до <input class="cost-input" type="text" name="cost-to" value="3000"></label>
+              <label>от <input class="cost-input cost-input-min" type="text" name="cost-from" value="0" size="6"></label>
+              <label>до <input class="cost-input cost-input-max" type="text" name="cost-to" value="3000"></label>
             </div>
             <div class="cost-range">
-              <div class="range-slider range-slider-left"></div>
-              <div class="range-slider range-slider-right"></div>
+              <button class="range-slider range-slider-min" type="button" data-value="0"></button>
+              <button class="range-slider range-slider-max" type="button" data-value="86"></button>
             </div>
           </div>
           <button class="btn btn-light" type="submit">Показать</button>
