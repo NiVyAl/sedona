@@ -357,12 +357,20 @@ input {
     background: #fff;
   }
 
+  .input-date input.input-error,
+  .input-counter input.input-error {
+    border-color: #f00;
+  }
+
   .input-date input {
     width: calc(100% - 38px);
   }
 
   .input-counter input {
     width: calc(100% - 76px);
+
+    padding: 4px;
+
     text-align: center;
   }
 
@@ -406,16 +414,6 @@ input {
     padding: 0;
     color: #81b3d2;
   }
-
-  .input-date button:disabled,
-  .input-counter button:disabled {
-    color: #ddd;
-    background: #f2f2f2;
-  }
-
-input.input-error {
-  border-color: #f33;
-}
 
 
 /*  стилизация checkbox
