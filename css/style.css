@@ -250,11 +250,13 @@ ul.row {
 
   cursor: pointer;
 }
-.btn:active {
-  color: rgba(255,255,255,.3);
+
+.btn:hover {
+  background: #669ec0;
 }
 
 .btn:active {
+  color: rgba(255,255,255,.3);
   background: #5496bd;
 }
 
