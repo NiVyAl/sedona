@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Седона</title>
   <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
 </head>
 <body>
   <div class="main-container">
@@ -35,19 +35,19 @@
         <p>Рассмотрим 5 причин, по которым Седона круче чем гранд каньон!</p>
       </section>
 
-      <ul class="features features-open row">
-        <li class="feature-description column">
+      <div class="features features-open row">
+        <div class="feature-description column">
           <div class="feature-title">
             Настоящий<br>
             городок
           </div>
           <span class="feature-number">— №1 —</span>
           <p>Седона не атракцион для туристов, там течет своя жизнь</p>
-        </li>
-        <li class="feature-poster column column-double">
+        </div>
+        <div class="feature-poster column column-double">
           <img class="poster" src="img/tmp/photo-02.jpg" width="1600" height="800" alt="Городок">
-        </li>
-      </ul>
+        </div>
+      </div>
 
       <ul class="advices row">
         <li class="advice-description column">
@@ -64,19 +64,19 @@
         </li>
       </ul>
 
-      <ul class="features features-open row">
-        <li class="feature-poster column column-double">
+      <div class="features features-open row">
+        <div class="feature-poster column column-double">
           <img class="poster" src="img/tmp/photo-03.jpg"  width="1600" height="800" alt="Мост дьявола">
-        </li>
-        <li class="feature-description column">
+        </div>
+        <div class="feature-description column">
           <div class="feature-title">
             Там есть<br>
             мост дьявола
           </div>
           <span class="feature-number">— №2 —</span>
           <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
-        </li>
-      </ul>
+        </div>
+      </div>
 
       <ul class="features row">
         <li class="feature-description column">
@@ -108,57 +108,47 @@
       <div class="choose-hotel" id="choose-hotel">
         <h2>Заинтересовались?</h2>
         <p>Укажите предполагаемые даты поездки<br> и мы покажем вам лучшие предложения гостиниц в седоне</p>
-        <a class="btn btn-tab btn-brown btn-toggle" href="#">Поиск гостиницы в Седоне</a>
+        <a class="btn btn-order btn-toggle" href="#">Поиск гостиницы в Седоне</a>
 
         <div class="choose-hotel-popup popup popup-hide">
           <form class="form" action="/search" method="post">
-            <ul class="form-row">
-              <li class="form-cell">
+            <div class="form-row">
+              <div class="form-cell">
                 <label>Дата заезда:</label>
-              </li>
-              <li class="form-cell form-cell-wide">
-                <div class="input-date">
-                  <input type="text" name="date-in" value="24 Апреля 2014">
-                  <button class="icon-calendar" type="button"></button>
-                </div>
-              </li>
-            </ul>
-
-            <ul class="form-row">
-              <li class="form-cell">
+              </div>
+              <div class="input-date form-cell form-cell-wide">
+                <input type="text" name="date-in" value="24 Апреля 2014">
+                <button class="icon-calendar" type="button"></button>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-cell">
                 <label>Дата выезда:</label>
-              </li>
-              <li class="form-cell form-cell-wide">
-                <div class="input-date">
-                  <input type="text" name="date-out" value="4 июля 2014">
-                  <button class="icon-calendar" type="button"></button>
-                </div>
-              </li>
-            </ul>
-
-            <ul class="form-row">
-              <li class="form-cell">
+              </div>
+              <div class="input-date form-cell form-cell-wide">
+                <input type="text" name="date-out" value="4 июля 2014">
+                <button class="icon-calendar" type="button"></button>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-cell">
                 <label>Взрослые:</label>
-              </li>
-              <li class="form-cell">
-                <div class="input-counter">
-                  <button class="icon-minus" type="button"></button>
-                  <input type="text" name="counter-adult" value="2">
-                  <button class="icon-plus" type="button"></button>
-                </div>
-              </li>
-              <li class="form-cell">
+              </div>
+              <div class="input-counter form-cell">
+                <button class="icon-minus" type="button"></button>
+                <input type="text" name="counter-adult" value="2">
+                <button class="icon-plus" type="button"></button>
+              </div>
+              <div class="form-cell">
                 <label>Дети:</label>
-              </li>
-              <li class="form-cell">
-                <div class="input-counter">
-                  <button class="icon-minus" type="button"></button>
-                  <input type="text" name="counter-children" value="0">
-                  <button class="icon-plus" type="button"></button>
-                </div>
-              </li>
-            </ul>
-            <button class="btn btn-tab btn-blue" type="submit">Найти</button>
+              </div>
+              <div class="input-counter form-cell">
+                <button class="icon-minus" type="button"></button>
+                <input type="text" name="counter-children" value="0">
+                <button class="icon-plus" type="button"></button>
+              </div>
+            </div>
+            <button class="btn" type="submit">Найти</button>
           </form>
         </div>
       </div>
@@ -169,26 +159,26 @@
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d838162.8369633064!2d-111.79513845!3d34.854378399999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2sSedona%2C+AZ%2C+USA!5e0!3m2!1sen!2sru!4v1435000602855" width="1200" height="593" allowfullscreen></iframe>
       </div>
 
-      <ul class="footer-columns row">
-        <li class="footer-hashtag column">
+      <div class="footer-columns row">
+        <div class="footer-hashtag column">
           <a href="#">#visitsedona</a>
-        </li>
-        <li class="footer-socials column">
+        </div>
+        <div class="footer-socials column">
           <ul>
-            <li><a class="btn btn-social btn-blue icon-twitter" href="#">Twitter</a></li>
-            <li><a class="btn btn-social btn-blue icon-facebook" href="#">Facebook</a></li>
-            <li><a class="btn btn-social btn-blue icon-youtube" href="#">Youtube</a></li>
+            <li><a class="btn btn-social icon-twitter" href="#">Twitter</a></li>
+            <li><a class="btn btn-social icon-facebook" href="#">Facebook</a></li>
+            <li><a class="btn btn-social icon-youtube" href="#">Youtube</a></li>
           </ul>
-        </li>
-        <li class="footer-copyright column">
+        </div>
+        <div class="footer-copyright column">
           <span>website by</span>
           <a class="logo-htmlacademy" href="https://htmlacademy.ru/">logo-htmlacademy</a>
-        </li>
-      </ul>
+        </div>
+      </div>
     </footer>
   </div>
 
-  <!--<script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=B4xz3OhG1NpNoXt_DV-0Khy-zlejFxE2&id=map"></script>-->
-  <script src="js/main.js"></script>
+  <!-- <script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=B4xz3OhG1NpNoXt_DV-0Khy-zlejFxE2&id=map"></script> -->
+  <script src="js/main.min.js"></script>
 </body>
 </html>

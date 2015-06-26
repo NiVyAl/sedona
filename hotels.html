@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Гостиницы | Седона</title>
   <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
 </head>
 <body class="inner-page hotels">
   <div class="main-container">
@@ -22,49 +22,32 @@
 
     <div class="hotels-filters" id="hotels-filters">
       <form class="filters row" action="/filter" method="post">
-        <div class="filter-options column column-double column-left">
-          <section class="sub-column">
+        <div class="filter-options column column-double">
+          <div class="options">
             <h2 class="filter-title">Инфраструктура:</h2>
-            <ul class="options">
-              <li>
-                <input class="control control-check" id="check-f-1" type="checkbox" name="facilities" value="val-1" checked>
-                <label for="check-f-1">Бассейн</label>
-              </li>
-              <li>
-                <input class="control control-check" id="check-f-2" type="checkbox" name="facilities" value="val-2">
-                <label for="check-f-2">Парковка</label>
-              </li>
-              <li>
-                <input class="control control-check" id="check-f-3" type="checkbox" name="facilities" value="val-3" disabled>
-                <label for="check-f-3">Wi-Fi</label>
-              </li>
-            </ul>
-          </section>
-
-          <section class="sub-column">
+            <input class="control-check" id="check-f-1" type="checkbox" name="facilities" value="val-1" checked>
+            <label class="control-label" for="check-f-1">Бассейн</label>
+            <input class="control-check" id="check-f-2" type="checkbox" name="facilities" value="val-2">
+            <label class="control-label" for="check-f-2">Парковка</label>
+            <input class="control-check" id="check-f-3" type="checkbox" name="facilities" value="val-3">
+            <label class="control-label" for="check-f-3">Wi-Fi</label>
+          </div>
+          <div class="options">
             <h2 class="filter-title">Тип жилья:</h2>
-            <ul class="options">
-              <li>
-                <input class="control control-check" id="check-h-1" type="checkbox" name="housing" value="val-1" checked>
-                <label for="check-h-1">Гостиница</label>
-              </li>
-              <li>
-                <input class="control control-check" id="check-h-2" type="checkbox" name="housing" value="val-2" checked>
-                <label for="check-h-2">Мотель</label>
-              </li>
-              <li>
-                <input class="control control-check" id="check-h-3" type="checkbox" name="housing" value="val-3" checked>
-                <label for="check-h-3">Апартаменты</label>
-              </li>
-            </ul>
-          </section>
+            <input class="control-check" id="check-h-1" type="checkbox" name="housing" value="val-1" checked>
+            <label class="control-label" for="check-h-1">Гостиница</label>
+            <input class="control-check" id="check-h-2" type="checkbox" name="housing" value="val-2" checked>
+            <label class="control-label" for="check-h-2">Мотель</label>
+            <input class="control-check" id="check-h-3" type="checkbox" name="housing" value="val-3" checked>
+            <label class="control-label" for="check-h-3">Апартаменты</label>
+          </div>
         </div>
 
-        <section class="filter-cost column column-right">
+        <div class="filter-cost column">
           <h2 class="filter-title">Стоимость в сутки (Р):</h2>
           <div class="cost-control" id="cost-control">
             <div class="cost-group">
-              <label>от <input class="cost-input cost-input-min" type="text" name="cost-from" value="0" size="6"></label>
+              <label>от <input class="cost-input cost-input-min" type="text" name="cost-from" value="0"></label>
               <label>до <input class="cost-input cost-input-max" type="text" name="cost-to" value="3000"></label>
             </div>
             <div class="range">
@@ -75,7 +58,7 @@
             </div>
           </div>
           <button class="btn btn-light" type="submit">Показать</button>
-        </section>
+        </div>
       </form>
     </div>
 
@@ -106,10 +89,10 @@
           <div class="catalog-column hotel-info">
             <h2 class="hotel-title"><a href="#">Amara Resort &amp; Spa</a></h2>
             <p class="hotel-action"> Гостиница
-              <a href="#" class="btn btn-blue">Подробнее</a>
+              <a href="#" class="btn">Подробнее</a>
             </p>
             <p class="hotel-action"> ОТ 3500 Р.
-              <a href="#" class="btn btn-brown">Забронировать</a>
+              <a href="#" class="btn btn-order">Забронировать</a>
             </p>
           </div>
           <ul class="hotel-stars catalog-label">
@@ -128,10 +111,10 @@
           <div class="catalog-column hotel-info">
             <h2 class="hotel-title"><a href="#">Desert Quail Inn</a></h2>
             <p class="hotel-action"> Мотель
-              <a href="#" class="btn btn-blue">Подробнее</a>
+              <a href="#" class="btn">Подробнее</a>
             </p>
             <p class="hotel-action"> ОТ 2000 Р.
-              <a href="#" class="btn btn-brown">Забронировать</a>
+              <a href="#" class="btn btn-order">Забронировать</a>
             </p>
           </div>
           <ul class="hotel-stars catalog-label">
@@ -148,10 +131,10 @@
           <div class="catalog-column hotel-info">
             <h2 class="hotel-title"><a href="#">Villas at Poco Diablo</a></h2>
             <p class="hotel-action"> Апартаменты
-              <a href="#" class="btn btn-blue">Подробнее</a>
+              <a href="#" class="btn">Подробнее</a>
             </p>
             <p class="hotel-action"> ОТ 4000 Р.
-              <a href="#" class="btn btn-brown">Забронировать</a>
+              <a href="#" class="btn btn-order">Забронировать</a>
             </p>
           </div>
           <ul class="hotel-stars catalog-label">
@@ -165,25 +148,25 @@
     </div>
 
     <footer class="main-footer">
-      <ul class="footer-columns row">
-        <li class="footer-hashtag column">
+      <div class="footer-columns row">
+        <div class="footer-hashtag column">
           <a href="#">#visitsedona</a>
-        </li>
-        <li class="footer-socials column">
+        </div>
+        <div class="footer-socials column">
           <ul>
-            <li><a class="btn btn-social btn-blue icon-twitter" href="#">Twitter</a></li>
-            <li><a class="btn btn-social btn-blue icon-facebook" href="#">Facebook</a></li>
-            <li><a class="btn btn-social btn-blue icon-youtube" href="#">Youtube</a></li>
+            <li><a class="btn btn-social icon-twitter" href="#">Twitter</a></li>
+            <li><a class="btn btn-social icon-facebook" href="#">Facebook</a></li>
+            <li><a class="btn btn-social icon-youtube" href="#">Youtube</a></li>
           </ul>
-        </li>
-        <li class="footer-copyright column">
+        </div>
+        <div class="footer-copyright column">
           <span>website by</span>
           <a class="logo-htmlacademy" href="https://htmlacademy.ru/">logo-htmlacademy</a>
-        </li>
-      </ul>
+        </div>
+      </div>
     </footer>
   </div>
 
-  <script src="js/main.js"></script>
+  <script src="js/main.min.js"></script>
 </body>
 </html>

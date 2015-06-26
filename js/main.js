@@ -13,8 +13,8 @@
         event.preventDefault();
 
         popup = chooseHotel.querySelector('.choose-hotel-popup');
-        popup.classList.toggle('popup-show');
         popup.classList.toggle('popup-hide');
+        popup.classList.toggle('popup-show');
 
         if(popup.classList.contains('popup-show')) {
           popup.querySelector('input').focus();
@@ -83,29 +83,24 @@
 
   // обработка событий для блока hotels-filters
   if(hotelsFilters) {
-
     var w = 20, // slider width === 20px
       range = hotelsFilters.querySelector('.range'),
-      rangeRect = {
-        'left': range.getBoundingClientRect().left,
-        'right': range.getBoundingClientRect().right,
-        'width': range.getBoundingClientRect().width - 2*w
-      },
       scale = range.querySelector('.scale'),
       sliderMin = scale.querySelector('.scale-slider-min'),
       sliderMax = scale.querySelector('.scale-slider-max');
 
     // реализация перемещения ползунков
     scale.addEventListener('mousedown', function(event) {
-      var sliderMinRange = {
+      var rangeWidth = range.getBoundingClientRect().width - 0*w,
+          sliderMinRange = {
             'curr': sliderMin.getBoundingClientRect().left,
-            'min': rangeRect.left,
+            'min': range.getBoundingClientRect().left,
             'max': sliderMax.getBoundingClientRect().right - 2*w,
           },
           sliderMaxRange = {
             'curr': sliderMax.getBoundingClientRect().right,
             'min': sliderMin.getBoundingClientRect().left + 2*w,
-            'max': rangeRect.right,
+            'max': range.getBoundingClientRect().right,
           };
 
       // console.log(event.clientX);
@@ -119,18 +114,18 @@
 
         document.onmousemove = function(event) {
           if(event.clientX - dx < sliderMinRange.min) {
-            scale.style.left = '0';
+            scale.style.left = '0%';
             // console.log('min: 0%');
             return;
           }
           if(event.clientX - dx > sliderMinRange.max) {
-            scale.style.left = sliderMinRange.max - sliderMinRange.min + 'px';
-            // console.log('min:', 100*(sliderMinRange.max - sliderMinRange.min)/rangeRect.width + '%');
+            scale.style.left = 100*(sliderMinRange.max - sliderMinRange.min)/rangeWidth + '%';
+            // console.log('min:', 100*(sliderMinRange.max - sliderMinRange.min)/rangeWidth + '%');
             return;
           }
 
-          scale.style.left = event.clientX - dx - sliderMinRange.min + 'px';
-          // console.log('min:', 100*(event.clientX - dx - sliderMinRange.min)/rangeRect.width + '%');
+          scale.style.left = 100*(event.clientX - dx - sliderMinRange.min)/rangeWidth + '%';
+          // console.log('min:', 100*(event.clientX - dx - sliderMinRange.min)/rangeWidth + '%');
         }
       }
 
@@ -139,21 +134,20 @@
 
         document.onmousemove = function(event) {
           if(event.clientX - dx > sliderMaxRange.max) {
-            scale.style.right = '0';
+            scale.style.right = '0%';
             // console.log('max: 100%');
             return;
           }
           if(event.clientX - dx < sliderMaxRange.min) {
-            scale.style.right = sliderMaxRange.max - sliderMaxRange.min + 'px';
-            // console.log('max:', 100 - 100*(sliderMaxRange.max - sliderMaxRange.min)/rangeRect.width + '%');
+            scale.style.right = 100*(sliderMaxRange.max - sliderMaxRange.min)/rangeWidth + '%';
+            // console.log('max:', 100 - 100*(sliderMaxRange.max - sliderMaxRange.min)/rangeWidth + '%');
             return;
           }
 
-          scale.style.right = sliderMaxRange.max - event.clientX + dx + 'px';
-          // console.log('max:', 100 - 100*(sliderMaxRange.max - event.clientX + dx)/rangeRect.width + '%');
+          scale.style.right = 100*(sliderMaxRange.max - event.clientX + dx)/rangeWidth + '%';
+          // console.log('max:', 100 - 100*(sliderMaxRange.max - event.clientX + dx)/rangeWidth + '%');
         }
       }
-
 
       document.onmouseup = function(e) {
         document.onmousemove = null;
