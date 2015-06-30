@@ -1212,34 +1212,48 @@ body {
       margin-right: 37px;
     }
       .sort-type a {
-        border-bottom: 1px dotted #000;
+        position: relative;
 
         text-decoration: none;
 
         color: #000;
         opacity: .3;
       }
+        .sort-type a::after {
+          content: '';
+
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: 0;
+
+          border-top: 1px dotted #000;
+        }
 
       .sort-type a:hover {
-        border-color: #81b3d2;
-
         color: #81b3d2;
         opacity: 1;
       }
+        .sort-type a:hover::after {
+          border-color: #81b3d2;
+        }
 
       .sort-type a:active {
-        border: none;
-
         color: #000;
-        opacity: 1;
       }
 
       .sort-type a.active {
-        border: none;
-
         color: #81b3d2;
+      }
+
+      .sort-type a:active,
+      .sort-type a.active {
         opacity: 1;
       }
+        .sort-type a:active::after,
+        .sort-type a.active::after {
+          border: none;
+        }
 
   .sort-order {
     font-size: 0;
