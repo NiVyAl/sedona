@@ -1343,12 +1343,8 @@ body {
   }
 
   .hotel-stars {
-    margin: 0;
     margin-right: -3px;
     margin-top: -4px;
-    padding: 0;
-
-    list-style: none;
   }
     .hotel-stars .icon-star {
       display: inline-block;
