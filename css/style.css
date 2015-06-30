@@ -1197,13 +1197,12 @@ body {
   .sort-type {
     margin: 0;
     padding: 0;
-    padding-top: 7px;
 
     list-style: none;
   }
     .sort-type li {
       display: inline-block;
-      vertical-align: baseline;
+      vertical-align: middle;
 
       margin-right: 29px;
     }
