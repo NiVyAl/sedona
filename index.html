@@ -104,43 +104,34 @@
 
         <div class="choose-hotel-popup popup popup-hide">
           <form class="form" action="/search" method="post">
-            <div class="form-row">
-              <div class="form-cell">
-                <label>Дата заезда:</label>
-              </div>
-              <div class="input-date form-cell form-cell-wide">
-                <input type="text" name="date-in" value="24 Апреля 2014">
-                <button class="icon-calendar" type="button"></button>
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-cell">
-                <label>Дата выезда:</label>
-              </div>
-              <div class="input-date form-cell form-cell-wide">
-                <input type="text" name="date-out" value="4 июля 2014">
-                <button class="icon-calendar" type="button"></button>
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-cell">
-                <label>Взрослые:</label>
-              </div>
-              <div class="input-counter form-cell">
+            <fieldset class="form-row">
+              <label class="form-label" for="date-in">Дата заезда:</label>
+              <input class="form-input form-input-date" type="date" name="date-in" id="date-in" value="24 Апреля 2014">
+              <span class="icon-calendar"></span>
+            </fieldset>
+
+            <fieldset class="form-row">
+              <label class="form-label" for="date-out">Дата выезда:</label>
+              <input class="form-input form-input-date" type="date" name="date-out" id="date-out" value="4 июля 2014">
+              <span class="icon-calendar"></span>
+            </fieldset>
+
+            <fieldset class="counters form-row">
+              <fieldset class="counter">
+                <label class="form-label" for="counter-adult">Взрослые:</label>
                 <button class="icon-minus" type="button"></button>
-                <input type="text" name="counter-adult" value="2">
+                <input class="form-input form-input-counter" type="text" name="counter-adult" id="counter-adult" value="2">
                 <button class="icon-plus" type="button"></button>
-              </div>
-              <div class="form-cell">
-                <label>Дети:</label>
-              </div>
-              <div class="input-counter form-cell">
+              </fieldset>
+              <fieldset class="counter">
+                <label class="form-label" for="counter-children">Дети:</label>
                 <button class="icon-minus" type="button"></button>
-                <input type="text" name="counter-children" value="0">
+                <input class="form-input form-input-counter" type="text" name="counter-children" id="counter-children" value="0">
                 <button class="icon-plus" type="button"></button>
-              </div>
-            </div>
-            <button class="btn" type="submit">Найти</button>
+              </fieldset>
+            </fieldset>
+
+            <input class="btn" type="submit" value="Найти">
           </form>
         </div>
       </div>
@@ -171,6 +162,6 @@
   </div>
 
   <!-- <script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=B4xz3OhG1NpNoXt_DV-0Khy-zlejFxE2&id=map"></script> -->
-  <script src="js/main.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

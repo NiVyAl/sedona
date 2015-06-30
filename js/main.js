@@ -61,18 +61,16 @@
     chooseHotel.querySelector('form').addEventListener('submit', function(event) {
       var target = event.target;
 
-      var elems = chooseHotel.querySelectorAll('.input-date, .input-counter');
+      var formInputs = chooseHotel.querySelectorAll('.form-input');
 
-      for(var i = 0, len= elems.length; i < len; i++) {
-        if(isValid(elems[i])) continue;
+      for(var i = 0, len= formInputs.length; i < len; i++) {
+        if(isValid(formInputs[i])) continue;
 
         event.preventDefault();
 
-        var input = elems[i].querySelector('input');
-
-        input.focus();
-        input.classList.add('input-error');
-        input.oninput = clearErrorState;
+        formInputs[i].focus();
+        formInputs[i].classList.add('form-input-error');
+        formInputs[i].oninput = clearErrorState;
 
         alert('поле заполнено неверно');
         return;
@@ -159,7 +157,7 @@
 
   // очистка статуса ошибки для поля ввода
   function clearErrorState() {
-    this.classList.remove('input-error');
+    this.classList.remove('form-input-error');
     this.oninput = null;
   }
 
@@ -169,7 +167,7 @@
 
     if(isCounterValid(input.value)) return;
 
-    if(input.classList.contains('input-error')) {
+    if(input.classList.contains('form-input-error')) {
       input.oninput();
     }
 
@@ -205,18 +203,17 @@
   }
 
   // обобщающая функция проверки ввода
-  function isValid(elem) {
-    var input = elem.querySelector('input');
-    console.log(input.type);
-    console.log(input.name);
-    console.log(input.value);
-    console.log(input.validity);
+  function isValid(input) {
+    // console.log(input.type);
+    // console.log(input.name);
+    // console.log(input.value);
+    // console.log(input.validity);
 
-    if(elem.classList.contains('input-counter')) {
+    if(input.classList.contains('form-input-counter')) {
       return isCounterValid(input.value);
     }
 
-    if(elem.classList.contains('input-date')) {
+    if(input.classList.contains('form-input-date')) {
       return isDateValid(input.value);
     }
   }

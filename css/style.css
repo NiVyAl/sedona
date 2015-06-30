@@ -299,9 +299,8 @@ ul.row {
 
 /*  стилизация полей ввода
 ------------------------------------------------------------------------------*/
-input {
+.form-input {
   box-sizing: border-box;
-  width: 100%;
 
   padding: 8px;
 
@@ -318,89 +317,19 @@ input {
   background: #f2f2f2;
 }
 
-
-.input-date,
-.input-counter {
-  font-size: 0;
+.form-input:hover {
+  border-color: #ebebeb;
+  background: #ebebeb;
 }
-  .input-date input,
-  .input-counter input,
-  .input-date button,
-  .input-counter button {
-    display: inline-block;
-    vertical-align: top;
-  }
 
-  .input-date input:hover,
-  .input-counter input:hover {
-    border-color: #ebebeb;
-    background: #ebebeb;
-  }
+.form-input:focus {
+  border-color: #e5e5e5;
+  background: #fff;
+}
 
-  .input-date input:focus,
-  .input-counter input:focus {
-    border-color: #e5e5e5;
-    background: #fff;
-  }
-
-  .input-date input.input-error,
-  .input-counter input.input-error {
-    border-color: #f00;
-  }
-
-  .input-date input {
-    width: calc(100% - 38px);
-  }
-
-  .input-counter input {
-    width: calc(100% - 76px);
-
-    padding: 8px 4px;
-
-    text-align: center;
-  }
-
-  .input-date button,
-  .input-counter button {
-      padding: 0;
-
-      border: none;
-      outline: none;
-
-      color: #a9a9a9;
-      background: #f2f2f2;
-  }
-    .input-date button::before,
-    .input-counter button::before {
-      display: block;
-
-      width: 38px;
-      margin: 0;
-
-      line-height: 38px;
-
-      text-align: center;
-    }
-
-    .input-date button::before {
-      font-size: 21px;
-    }
-
-    .input-counter button::before {
-      font-size: 14px;
-    }
-
-  .input-date button:hover,
-  .input-counter button:hover {
-    color: #000;
-    background: #ebebeb;
-  }
-
-  .input-date button:active,
-  .input-counter button:active {
-    padding: 0;
-    color: #81b3d2;
-  }
+.form-input.form-input-error {
+  border-color: #f00;
+}
 
 
 /*  стилизация checkbox
@@ -953,41 +882,117 @@ body {
       margin: 55px;
     }
       .form-row {
+        position: relative;
+
+        margin: 0;
         margin-bottom: 30px;
+        padding: 0;
 
         border: none;
 
         font-size: 0;
-        line-height: 26px;
 
         font-weight: bold;
 
         text-align: left;
       }
-        .form-cell {
+        .form .form-label {
           display: inline-block;
-          vertical-align: middle;
+          vertical-align: top;
 
-          box-sizing: border-box;
-          width: 25%;
+          width: 115px;
 
+          font-size: 14px;
+          line-height: 41px;
         }
-          .form-cell label {
-            font-size: 14px;
+
+        .form .form-input {
+          display: inline-block;
+          vertical-align: top;
+        }
+
+        .form-input-date {
+          width: 343px;
+          padding-right: 38px;
+        }
+
+        .icon-calendar {
+          position: absolute;
+          right: 0;
+          top: 0;
+
+          color: #a9a9a9;
+        }
+          .icon-calendar::before {
+            width: 38px;
+            margin: 0;
+
+            font-size: 21px;
+            line-height: 38px;
+
+            text-align: center;
           }
 
-        .form-cell-wide {
-          width: 75%;
+        .form-input-date:hover + .icon-calendar {
+          color: #000;
         }
 
-        .form-cell:nth-child(3) {
-          padding-left: 50px;
+        .form-input-date:focus + .icon-calendar {
+          color: #81b3d2;
         }
+
+        .counter {
+          display: inline-block;
+          vertical-align: top;
+
+          margin: 0;
+          padding: 0;
+
+          border: none;
+
+          font-size: 0px;
+        }
+          .form-input-counter {
+            width: 38px;
+
+            padding: 8px 0;
+
+            text-align: center;
+          }
+
+          .counter button {
+            display: inline-block;
+            vertical-align: top;
+
+            padding: 0;
+
+            border: none;
+            outline: none;
+
+            color: #a9a9a9;
+            background: #f2f2f2;
+          }
+            .counter button::before {
+              display: block;
+
+              width: 38px;
+              margin: 0;
+
+              font-size: 14px;
+              line-height: 38px;
+
+              text-align: center;
+            }
+
+          .counter .form-label[for='counter-children'] {
+            width: 65px;
+            margin-left: 50px;
+          }
 
       .form .btn {
         width: 100%;
 
-        margin-top: 54px;
+        margin-top: 24px;
         padding: 16px;
 
         font-size: 21px;
