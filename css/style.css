@@ -690,7 +690,7 @@ body {
   background: #3d4c57 url(../img/bg-main-poster.jpg) no-repeat 50% 30%;
   background-size: cover;
 }
-  /* нижняя маска постера *//*
+  /* нижняя маска постера */
   .main-poster::after {
     content: '';
 
@@ -702,19 +702,22 @@ body {
 
     height: 57px;
 
-    background: transparent url('../img/bg-poster-mask.png') no-repeat;
-    background-position: 0 50%;
+    background: transparent url('../img/bg-poster-mask.svg') no-repeat 0 50%;
     background-size: 100% 57px;
-  }*/
+  }
 
-  .main-poster-mask {
+  .no-svg .main-poster::after {
+    background-image: url('../img/bg-poster-mask.png');
+  }
+
+/*  .main-poster-mask {
     position: absolute;
     z-index: 999;
     left: 0;
     bottom: 0;
 
     width: 100%;
-  }
+  }*/
 
   .slogan {
     position: absolute;
