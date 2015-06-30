@@ -334,11 +334,11 @@ ul.row {
 
 /*  стилизация checkbox
 ------------------------------------------------------------------------------*/
-input[type='checkbox'] {
+.form-checkbox {
   display: none;
 }
 
-input[type='checkbox'] + label {
+.form-checkbox + .form-label {
   position: relative;
 
   padding-left: 42px;
@@ -348,7 +348,7 @@ input[type='checkbox'] + label {
 
   cursor: pointer;
 }
-  input[type='checkbox'] + label::before {
+  .form-checkbox + .form-label::before {
     content: '\2610';
 
     position: absolute;
@@ -361,17 +361,17 @@ input[type='checkbox'] + label {
     color: #b5b5b5;
   }
 
-  input[type='checkbox']:checked + label::before {
+  .form-checkbox:checked + .form-label::before {
     content: '\2611';
   }
 
-  input[type='checkbox'] + label:hover::before {
+  .form-checkbox + .form-label:hover::before {
     color: #fff;
   }
 
-  input[type='checkbox']:disabled + label,
-  input[type='checkbox']:disabled + label::before,
-  input[type='checkbox']:disabled + label:hover::before {
+  .form-checkbox:disabled + .form-label,
+  .form-checkbox:disabled + .form-label::before,
+  .form-checkbox:disabled + .form-label:hover::before {
     color: #6a6a6a;
     cursor: default;
   }
@@ -1021,10 +1021,7 @@ body {
   }
 
   .filter-options {
-    width: 60.75%;
-
     padding-left: 5.92%;
-
     font-size: 0;
   }
     .options {
@@ -1033,24 +1030,29 @@ body {
 
       max-width: 150px;
 
+      margin: 0;
       margin-right: 30px;
+      padding: 0;
+
+      border: none;
 
       font-size: 14px;
     }
-      .control-label {
-        display: block;
-        margin: 25px 0;
+      .options ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
       }
+        .options li {
+          margin: 25px 0;
+        }
 
     .options:first-child {
       margin-right: 119px;
     }
 
   .filter-cost {
-    width: 26.5%;
-
     padding-right: 6.83%;
-
     text-align: center;
   }
     .cost-group {
