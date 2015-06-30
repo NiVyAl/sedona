@@ -220,6 +220,8 @@ ul.row {
           animation: hide .25s forwards;
 }
 
+
+
 /**
  *  ============================================================================
  *       Стилизация элементов по стайлгайду
@@ -414,7 +416,7 @@ body {
 }
   .main-header .logo {
     position: absolute;
-    z-index:99;
+    z-index: 1;
     left: 50%;
 
     width: 138px;
@@ -513,7 +515,6 @@ body {
 /*.main-footer {
 
 }*/
-
   .main-footer .footer-columns {
     padding: 30px 0;
 
@@ -626,7 +627,7 @@ body {
     content: '';
 
     position: absolute;
-    z-index: 99;
+    z-index: 2;
     left: 0;
     right: 0;
     bottom: 0;
@@ -643,7 +644,7 @@ body {
 
   .slogan {
     position: absolute;
-    z-index: 99;
+    z-index: 1;
     left: 50%;
 
     width: 458px;
@@ -739,7 +740,6 @@ body {
     padding-top: 35px;
   }
     .features-open .feature-title {
-      /*margin-top: 52px;*/
       margin-top: 17px;
     }
 
@@ -1007,7 +1007,7 @@ body {
   padding-top: 14px;
   padding-bottom: 8px;
 
-  color: #f2f2f2;
+  color: #fff;
   background: #46525c url('../img/bg-hotels-filters.jpg') no-repeat 0 50%;
   background-size: cover;
 }
@@ -1097,6 +1097,7 @@ body {
 
           border: none;
 
+          color: #fff;
           background: transparent;
         }
 
@@ -1163,42 +1164,8 @@ body {
     padding-top: 30px;
     padding-bottom: 30px;
 
-    /*font-size: 0;*/
-
     border-bottom: 1px solid #e5e5e5;
   }
-    .catalog-column {
-      display: inline-block;
-      vertical-align: top;
-
-      max-width: 70%;
-
-      font-size: 14px;
-    }
-
-    .catalog-column:first-child {
-      width: 135px;
-      margin-right: 32px;
-    }
-
-    .catalog-column:first-child {
-      width: 135px;
-      margin-right: 32px;
-    }
-
-    .catalog-label {
-      position: absolute;
-      top: 30px;
-      right: 6.5%;
-
-      font-size: 14px;
-    }
-
-    .catalog-label-bottom {
-      top: auto;
-      bottom: 29px;
-    }
-
     .catalog-column-left {
       float: left;
       width: 135px;
