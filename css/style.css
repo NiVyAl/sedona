@@ -1021,7 +1021,7 @@ body {
   }
 
   .filter-options {
-    padding-left: 5.92%;
+    padding-left: 6%;
     font-size: 0;
   }
     .options {
@@ -1052,7 +1052,7 @@ body {
     }
 
   .filter-cost {
-    padding-right: 6.83%;
+    padding-right: 6.5%;
     text-align: center;
   }
     .cost-group {
@@ -1158,12 +1158,12 @@ body {
   .catalog-row {
     position: relative;
 
-    padding-left: 5.92%;
-    padding-right: 6.83%;
+    padding-left: 6%;
+    padding-right: 6.5%;
     padding-top: 30px;
-    padding-bottom: 29px;
+    padding-bottom: 30px;
 
-    font-size: 0;
+    /*font-size: 0;*/
 
     border-bottom: 1px solid #e5e5e5;
   }
@@ -1189,7 +1189,7 @@ body {
     .catalog-label {
       position: absolute;
       top: 30px;
-      right: 6.83%;
+      right: 6.5%;
 
       font-size: 14px;
     }
@@ -1199,84 +1199,111 @@ body {
       bottom: 29px;
     }
 
+    .catalog-column-left {
+      float: left;
+      width: 135px;
+    }
+
+    .catalog-column-right {
+      float: right;
+      width: 110px;
+      text-align: right;
+    }
+
+    .catalog-column-middle {
+      margin-left: 167px;
+      margin-right: 110px;
+    }
+
 
 /*  стилизация блока catalog-header
 ------------------------------------------------------------------------------*/
 /*.catalog-header {
 
 }*/
-  .catalog-header a,
-  .catalog-header span {
-    font-size: 12px;
-    line-height: 18px;
-  }
+  .catalog-header h2 {
+    margin: 0;
 
-  .catalog-header .result-count {
     font-size: 21px;
     line-height: 26px;
-
-    font-weight: bold;
   }
 
   .sort-type {
-    margin: 0;
-    padding: 0;
-
-    list-style: none;
+    font-size: 0;
   }
-    .sort-type li {
+    .sort-label {
       display: inline-block;
-      vertical-align: middle;
+      vertical-align: top;
 
-      margin-right: 29px;
+      width: 114px;
+
+      font-size: 12px;
+      line-height: 26px;
     }
 
-    .sort-type li:first-child {
-      margin-right: 37px;
+    .sort-type ul {
+      display: inline-block;
+      vertical-align: top;
+
+      max-width: 70%;
+
+      margin: 0;
+      padding: 0;
+
+      list-style: none;
     }
-      .sort-type a {
-        position: relative;
+      .sort-type li {
+        display: inline-block;
+        vertical-align: top;
 
-        text-decoration: none;
+        margin-right: 32px;
 
-        color: #000;
-        opacity: .3;
+        font-size: 12px;
+        line-height: 26px;
       }
-        .sort-type a::after {
-          content: '';
+        .sort-type a {
+          position: relative;
 
-          position: absolute;
-          left: 0;
-          right: 0;
-          bottom: 0;
+          text-decoration: none;
 
-          border-top: 1px dotted #000;
+          color: #000;
+          opacity: .3;
+        }
+          .sort-type a::after {
+            content: '';
+
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+
+            border-top: 1px dotted #000;
+          }
+
+        .sort-type a:hover {
+          color: #81b3d2;
+          opacity: 1;
+        }
+          .sort-type a:hover::after {
+            border-color: #81b3d2;
+          }
+
+        .sort-type a:active {
+          color: #000;
         }
 
-      .sort-type a:hover {
-        color: #81b3d2;
-        opacity: 1;
-      }
-        .sort-type a:hover::after {
-          border-color: #81b3d2;
+        .sort-type a.active {
+          color: #81b3d2;
         }
 
-      .sort-type a:active {
-        color: #000;
-      }
-
-      .sort-type a.active {
-        color: #81b3d2;
-      }
-
-      .sort-type a:active,
-      .sort-type a.active {
-        opacity: 1;
-      }
-        .sort-type a:active::after,
-        .sort-type a.active::after {
-          border: none;
+        .sort-type a:active,
+        .sort-type a.active {
+          opacity: 1;
         }
+          .sort-type a:active::after,
+          .sort-type a.active::after {
+            border: none;
+          }
 
   .sort-order {
     font-size: 0;
@@ -1287,6 +1314,8 @@ body {
 
       font-size: 23px;
       line-height: 23px;
+
+      text-decoration: none;
 
       color: #000;
       opacity: .3;
