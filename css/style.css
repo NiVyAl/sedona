@@ -1157,8 +1157,6 @@ body {
 
 }*/
   .catalog-row {
-    position: relative;
-
     padding-left: 6%;
     padding-right: 6.5%;
     padding-top: 30px;
@@ -1313,7 +1311,6 @@ body {
 
 }*/
   .hotel-thumb {
-    display: block;
     text-decoration: none;
   }
     .hotel-thumb img {
