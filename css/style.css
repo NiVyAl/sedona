@@ -1345,12 +1345,16 @@ body {
 /*.catalog-content {
 
 }*/
-  .catalog-content img {
+  .hotel-thumb {
     display: block;
-
-    width: 135px;
-    height: 90px;
+    text-decoration: none;
   }
+    .hotel-thumb img {
+      display: block;
+
+      width: 135px;
+      height: 90px;
+    }
 
   .hotel-info {
     font-size: 0px;
@@ -1396,40 +1400,58 @@ body {
           padding: 3px 17px;
       }
 
-  .hotel-stars,
-  .hotel-rating {
-    font-size: 14px;
-  }
+  .ratings-stars {
+    position: relative;
 
-  .hotel-rating {
-    padding: 3px 11px;
+    width: 110px;
+    height: 21px;
+
+    margin-bottom: 42px;
+
+    background: transparent url('../img/icon-star.svg') repeat-x;
+    background-position: right top;
+    background-size: 24px;
+  }
+    .ratings-stars::before {
+      content: '';
+
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+
+      background: #fff;
+    }
+
+    .ratings-stars[data-rating="5"]::before {
+      right: 110px;
+    }
+
+    .ratings-stars[data-rating="4"]::before {
+      right: 88px;
+    }
+
+    .ratings-stars[data-rating="3"]::before {
+      right: 66px;
+    }
+
+    .ratings-stars[data-rating="2"]::before {
+      right: 44px;
+    }
+
+    .ratings-stars[data-rating="1"]::before {
+      right: 22px;
+    }
+
+  .rating-value {
+    padding: 3px 0;
+
+    text-align: center;
 
     color: #666;
     background: #f2f2f2;
   }
-
-  .hotel-stars {
-    margin-right: -3px;
-    margin-top: -4px;
-  }
-    .hotel-stars .icon-star {
-      display: inline-block;
-      vertical-align: top;
-
-      margin-left: 2px;
-
-      font-size: 18px;
-
-      color: #81b3d2;
-    }
-      .hotel-stars .icon-star::before {
-        margin: 0;
-        padding: 0;
-
-        text-align: right;
-      }
-
-
 
 /**
  *  ============================================================================
