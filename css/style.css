@@ -42,27 +42,6 @@ ul.row {
 }
 
 
-/*  Web fonts
-------------------------------------------------------------------------------*/
-@font-face {
-  font-family: 'PT Sans';
-  font-style: normal;
-  font-weight: 400;
-  src: local('PT Sans'), local('PTSans-Regular'),
-    url(https://fonts.gstatic.com/s/ptsans/v8/ucVW2l9YCcVE52VxGq2zIw.woff2) format('woff2'),
-    url(https://fonts.gstatic.com/s/ptsans/v8/O5pe56LvR8OXax_Q9tUMDg.woff) format('woff');
-}
-
-@font-face {
-  font-family: 'PT Sans';
-  font-style: normal;
-  font-weight: 700;
-  src: local('PT Sans Bold'), local('PTSans-Bold'),
-      url(https://fonts.gstatic.com/s/ptsans/v8/kTYfCWJhlldPf5LnG4ZnHPk_vArhqVIZ0nv9q090hN8.woff2) format('woff2'),
-      url(https://fonts.gstatic.com/s/ptsans/v8/kTYfCWJhlldPf5LnG4ZnHBsxEYwM7FgeyaSgU71cLG0.woff) format('woff');
-}
-
-
 /*  Icon fonts
 ------------------------------------------------------------------------------*/
 @font-face {
