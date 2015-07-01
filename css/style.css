@@ -1311,6 +1311,7 @@ body {
 
 }*/
   .hotel-thumb {
+    outline: none;
     text-decoration: none;
   }
     .hotel-thumb img {
